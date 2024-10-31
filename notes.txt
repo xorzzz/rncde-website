@@ -1,0 +1,54 @@
+recomendación para servicios
+descripción de servicio agregar border izquierdo gris de quizas 2 o 1px
+Hacer el titulo mas grande del servicio
+agregar barra de color gradiente al titulo del servicio
+
+Tareas
+-Hacer el footer
+    *diseño desktop finalizado
+
+
+*Arreglar servicios quiza puedes ponnrlo como esta pagina https://designmodo.com/?u=4811%2F%3F+development-tutorials
+    -diseño en figma realizado
+    -vista para mobile terminada
+    +realizar vista para escritorio
+
+
+*Terminar contactanos
+    -diseño en figma realizado
+    
++Hacer el why us en html
+    +terminar diseño en figma
+
+
+
++Terminar Responsive de cards de about us
+   
+
++Terminar como lo hacemos
+    +posible diseño  + posible diseño https://i.pinimg.com/564x/7e/25/2b/7e252bb49b49dd290e5d770be4bf2eaa.jpg
+    imgs https://www.freepik.com/author/stories
+
+
+
+
+--------------------------------------------
+BOTONES VUE
+color normal cuando se hace hover se oscurese
+active: nada
+
+botones react
+hover tonalidad obscuro
+active escala 0.95quzas
+
+
+/texto line-height:25px
+
+h1 {
+  background-image: linear-gradient(90deg, #ff7e5f, #feb47b); /* Degradado */
+  -webkit-background-clip: text; /* Clip del fondo al texto */
+  -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el fondo */
+}
+
+scrolling idea
+https://dribbble.com/shots/7191986-AdCentrl-Homepage-Scrolling-Animation?utm_source=pinterest&utm_medium=referral&utm_campaign=pinterest_dribbble_sharing

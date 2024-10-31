@@ -1,0 +1,562 @@
+@import '@/assets/styles/variables.scss';
+
+.main-about {
+  // LAND SECTION
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 500px;
+
+  .land-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+    justify-content: center;
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      margin-top: 80px;
+
+      .title {
+        // estilos para el título
+      }
+
+      .description {
+        text-align: justify;
+        margin-top: 40px;
+        // estilos para la descripción
+      }
+    }
+
+    .img-container {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        // estilos para la imagen
+      }
+    }
+  }
+
+  // MISION SECTION
+  .mision-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 60px;
+    background-color: rgb(227, 227, 227);
+    min-height: 60vh;
+    .info-container {
+      .title {
+        display: none;
+        // estilos para el título
+      }
+
+      .paragraph {
+        text-align: justify;
+        margin-bottom: 10px;
+        // estilos para el párrafo
+      }
+    }
+
+    .img-container {
+      height: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .title-mb {
+        display: block;
+        margin-bottom: 20px;
+      }
+      .top-side {
+        background-color: $rc-gray;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .bottom-side {
+        gap: 10px;
+        height: 300px;
+        display: flex;
+        .as {
+          width: 100%;
+          background-color: $rc-gray;
+          border-radius: 10px;
+        }
+
+        .bs {
+          width: 100%;
+          background-color: $rc-gray;
+          border-radius: 10px;
+        }
+      }
+      img {
+        // estilos para la imagen
+      }
+    }
+  }
+
+  // WE ARE SECTION
+  .we-are-sectinon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      // estilos para el título
+      width: 100%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      margin-bottom: 60px;
+
+      .cards-container {
+        max-width: 1000px;
+
+        display: flex;
+        flex-direction: column;
+        .right-side {
+          width: 100%;
+        }
+        .left-side {
+          width: 100%;
+        }
+        .item {
+          display: flex;
+          flex-direction: row-reverse;
+          width: 100%;
+          align-items: center;
+          gap: 20px;
+          .text {
+            // estilos para el texto
+            width: fit-content;
+            text-align: justify;
+            padding: 10px;
+
+            .bolder {
+              font-weight: bolder;
+            }
+          }
+
+          .vignette {
+            // estilos para la viñeta
+            height: 50px;
+            width: 50px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0; /* Evita que se encoja */
+            position: relative;
+
+            .circle-1 {
+              position: absolute;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+              background-color: $rc-white;
+              border-radius: 50px;
+
+              box-shadow:
+                4px 4px 15px #d9d9d9,
+                -4px -4px 15px #ffffff;
+            }
+            .circle-2 {
+              position: absolute;
+              z-index: 2;
+              width: 70%;
+              height: 70%;
+              background-color: $rc-sky;
+              border-radius: 50px;
+            }
+            .icon {
+              position: absolute;
+              z-index: 3;
+              display: flex;
+              font-size: larger;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // LEADER SECTION
+  .leader-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 30px;
+
+    .content-container {
+      background-color: rgba(255, 0, 0, 0.441);
+      width: 100%;
+      //min-width: 80vh;
+
+      .title {
+        // estilos para el título
+      }
+
+      .paragraph {
+        margin-top: 20px;
+        text-align: justify;
+        // estilos para el párrafo
+      }
+    }
+    .cards-container {
+      background-color: rgba(0, 55, 255, 0.441);
+
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      //display: none;
+      .leader-card {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 10px 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+
+        .img-container {
+          width: 35%;
+          flex-shrink: 0;
+          overflow: hidden;
+          border-radius: 10px;
+          z-index: 1;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            // estilos para la imagen del líder
+          }
+        }
+
+        .info-container {
+          margin-left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+          z-index: 0;
+          background-color: #ebf0f4;
+          border-radius: 5px;
+
+          .front-layer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            box-sizing: border-box;
+            .name {
+              font-weight: bolder;
+              font-size: 24px;
+              //color: $rc-blue;
+              // estilos para el nombre
+            }
+
+            .job {
+              //margin-bottom: 20px;
+              // estilos para el cargo
+            }
+
+            .description {
+              text-align: justify;
+              font-size: 14px;
+              margin-top: 15px;
+              // estilos para la descripción
+            }
+          }
+          .back-layer {
+            width: -webkit-fill-available;
+            position: absolute;
+            z-index: 0;
+            display: flex;
+            justify-content: end;
+            height: 100%;
+          }
+        }
+      }
+
+      .r-side {
+        flex-direction: row-reverse;
+        border-radius: 5px;
+        .info {
+          margin-right: -10px;
+          .fl {
+            padding: 20px 30px 20px 20px;
+          }
+        }
+      }
+
+      .l-side {
+        flex-direction: row;
+        border-radius: 5px;
+
+        .info {
+          margin-left: -10px;
+          overflow: hidden;
+          .fl {
+            padding: 20px 20px 20px 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .main-about {
+    // LAND SECTION
+    .land-section {
+      padding: 0 10%;
+      flex-direction: row;
+      height: 90vh;
+      .info-container {
+        width: 90%;
+        justify-content: center;
+        .title {
+        }
+        .description {
+        }
+      }
+      .img-container {
+        //position: absolute;
+        width: 100%;
+        img {
+        }
+      }
+    }
+
+    // MISION SECTION
+    .mision-section {
+      padding: 0 10%;
+
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      column-gap: 10%;
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        .title {
+          display: block;
+          margin-bottom: 20px;
+        }
+        .paragraph {
+        }
+      }
+      .img-container {
+        width: 100%;
+        .title-mb {
+          display: none;
+        }
+        .top-side {
+        }
+        .bottom-side {
+          .as {
+          }
+          .bs {
+          }
+        }
+        img {
+        }
+      }
+    }
+
+    // WE ARE SECTION
+    .we-are-sectinon {
+      padding: 0 10%;
+      gap: 20px;
+      .container {
+        .title {
+        }
+        .cards-container {
+          flex-direction: row;
+          column-gap: 50px;
+          .item {
+            flex-direction: row;
+            .text {
+              .bolder {
+              }
+            }
+            .vignette {
+              .circle-1 {
+              }
+              .circle-2 {
+              }
+              .icon {
+              }
+            }
+          }
+          .right-container {
+            display: flex;
+            flex-direction: column;
+          }
+          .left-container {
+          }
+
+          .right {
+            display: flex;
+            flex-direction: row-reverse;
+          }
+          .left {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // LEADER SECTION
+    .leader-section {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 0 30px;
+      min-width: 80vh;
+
+      .content-container {
+        background-color: rgba(255, 0, 0, 0.441);
+        .title {
+          // estilos para el título
+        }
+
+        .paragraph {
+          margin-top: 20px;
+          text-align: justify;
+          // estilos para el párrafo
+        }
+      }
+      .cards-container {
+        background-color: rgba(0, 55, 255, 0.441);
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .leader-card {
+          display: flex;
+          flex-direction: row-reverse;
+          margin: 10px 0;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+          min-width: 500px; //display: none;
+
+          overflow: hidden;
+
+          .img-container {
+            width: 35%;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            z-index: 1;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
+              // estilos para la imagen del líder
+            }
+          }
+
+          .info-container {
+            margin-left: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            z-index: 0;
+            background-color: #ebf0f4;
+            border-radius: 5px;
+
+            .front-layer {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              z-index: 1;
+              box-sizing: border-box;
+              .name {
+                font-weight: bolder;
+                font-size: 24px;
+                //color: $rc-blue;
+                // estilos para el nombre
+              }
+
+              .job {
+                //margin-bottom: 20px;
+                // estilos para el cargo
+              }
+
+              .description {
+                text-align: justify;
+                font-size: 14px;
+                margin-top: 15px;
+                // estilos para la descripción
+              }
+            }
+            .back-layer {
+              width: -webkit-fill-available;
+              position: absolute;
+              z-index: 0;
+              display: flex;
+              justify-content: end;
+              height: 100%;
+            }
+          }
+        }
+
+        .r-side {
+          flex-direction: row-reverse;
+          border-radius: 5px;
+          .info {
+            margin-right: -10px;
+            .fl {
+              padding: 20px 30px 20px 20px;
+            }
+          }
+        }
+
+        .l-side {
+          flex-direction: row;
+          border-radius: 5px;
+
+          .info {
+            margin-left: -10px;
+            overflow: hidden;
+            .fl {
+              padding: 20px 20px 20px 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
