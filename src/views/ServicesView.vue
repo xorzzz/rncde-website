@@ -1,7 +1,7 @@
 <script setup>
 import ButtonOutline from '@/components/ButtonOutline.vue'
-import ServiceCard from '@/components/Cards/ServiceCard.vue'
 import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
+import ServiceCard from '@/components/Cards/ServiceCard.vue'
 
 import serviceImg1 from '@/assets/images/services/service-1.png' // Importar la imagen directamente
 import serviceImg2 from '@/assets/images/services/service-2.png' // Importar la imagen directamente
@@ -60,7 +60,7 @@ import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la 
         primaryColor="#4CAF50"
         secondaryColor="#edf9f2"
       />
-      <div style="display: flex; width: 100%; max-width: 900px; gap: 20px">
+      <div class="container">
         <ServiceCard
           class=""
           title="DESARROLLO DE APLICACIONES"
@@ -73,6 +73,7 @@ import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la 
           :imgUrl="serviceImg2"
           primaryColor="#2F80ED"
           secondaryColor="#F0F8FF"
+          orientation="vertical"
         />
         <ServiceCard
           title="SERVICIOS SAP"
@@ -85,32 +86,51 @@ import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la 
           :imgUrl="serviceImg3"
           primaryColor="#7C68FF"
           secondaryColor="#F2F0FF"
+          orientation="vertical"
         />
       </div>
-      <ServiceCard
-        title="CONSULTORÍAS TIC"
-        description="Convertimos tus ideas en realidad, creando un código robusto y personalizado que se adapta
+
+      <div class="container">
+        <ServiceCard
+          title="CONSULTORÍAS TIC"
+          description="Convertimos tus ideas en realidad, creando un código robusto y personalizado que se adapta
         perfectamente a sus operaciones"
-        :features="[
-          'Servicio adaptable a sus operaciones.',
-          'Servicio adaptable a sus operaciones.'
-        ]"
-        :imgUrl="serviceImg4"
-        primaryColor="#FFCC68"
-        secondaryColor="#FEFFF0"
-      />
-      <ServiceCard
-        title="VIGILANCIA Y TRANSFERENCIA ELECTRÓNICA"
-        description="Convertimos tus ideas en realidad, creando un código robusto y personalizado que se adapta
+          :features="[
+            'Servicio adaptable a sus operaciones.',
+            'Servicio adaptable a sus operaciones.'
+          ]"
+          :imgUrl="serviceImg4"
+          primaryColor="#FFCC68"
+          secondaryColor="#FEFFF0"
+          orientation="vertical"
+        />
+        <ServiceCard
+          title="VIGILANCIA Y TRANSFERENCIA ELECTRÓNICA"
+          description="Convertimos tus ideas en realidad, creando un código robusto y personalizado que se adapta
         perfectamente a sus operaciones"
-        :features="[
-          'Servicio adaptable a sus operaciones.',
-          'Servicio adaptable a sus operaciones.'
-        ]"
-        :imgUrl="serviceImg5"
-        primaryColor="#FF6868"
-        secondaryColor="#FFF0F0"
-      />
+          :features="[
+            'Servicio adaptable a sus operaciones.',
+            'Servicio adaptable a sus operaciones.'
+          ]"
+          :imgUrl="serviceImg5"
+          primaryColor="#FF6868"
+          secondaryColor="#FFF0F0"
+          orientation="vertical"
+        />
+      </div>
+
+      <!--
+      PRIMERO NECESITAMOS CREAR LAS CLASES EN EL HTML
+      LUEGO AÑADIRLAS AL SCSS EN AMBOS LUGARES (RESPONSIVE)
+      AJUSTAR EL CÒDIGO
+
+      DEFINIR COMO SE VA A MOSTRAR EL CONTENIDO DEL BOTON VER MAS
+
+      ARREGLAR BOTON PORQEU NO VA A ACORDE A LO ESPERADO
+      
+      
+      -->
+
       <ServiceCard
         title="SERVICIO ADICIONAL"
         description="Convertimos tus ideas en realidad, creando un código robusto y personalizado que se adapta

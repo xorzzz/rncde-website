@@ -46,78 +46,51 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
     padding: 0 30px;
     margin-bottom: 60px;
-    background-color: rgb(227, 227, 227);
+    background-image: linear-gradient(45deg, $rc-blue-5, $rc-blue-1);
     min-height: 60vh;
     .info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 800px;
       .title {
-        display: none;
         // estilos para el título
+        font-size: 24px;
+        color: $rc-sky;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5px 30px;
+        border-radius: 100px;
+        text-align: center;
+        width: max-content;
+        font-weight: 600;
       }
 
       .paragraph {
         text-align: justify;
-        margin-bottom: 10px;
+        color: $rc-white-1;
+
         // estilos para el párrafo
-      }
-    }
-
-    .img-container {
-      height: 300px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 20px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      .title-mb {
-        display: block;
-        margin-bottom: 20px;
-      }
-      .top-side {
-        background-color: $rc-gray;
-        height: 300px;
-        border-radius: 10px;
-      }
-      .bottom-side {
-        gap: 10px;
-        height: 300px;
-        display: flex;
-        .as {
-          width: 100%;
-          background-color: $rc-gray;
-          border-radius: 10px;
-        }
-
-        .bs {
-          width: 100%;
-          background-color: $rc-gray;
-          border-radius: 10px;
-        }
-      }
-      img {
-        // estilos para la imagen
       }
     }
   }
 
   // WE ARE SECTION
-  .we-are-sectinon {
+  .we-section {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     .title {
       // estilos para el título
       width: 100%;
+      text-align: center;
     }
     .container {
       display: flex;
@@ -197,7 +170,95 @@
   }
 
   // LEADER SECTION
-  .leader-section {
+  .customers-section {
+    display: flex;
+    flex-direction: column;
+    background-color: $rc-white-1;
+    gap: 30px;
+    padding: 60px 30px;
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .brands {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+      overflow: hidden;
+      .icon {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(221, 221, 221, 0.266);
+        border-radius: 8px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  //VALUES-SECTION
+  .values-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 30px;
+
+    .title {
+    }
+
+    .cards-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      .card {
+        max-width: 350px;
+        background-color: hsla(248, 100%, 70%, 0.03);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+
+        .description {
+          text-align: justify;
+        }
+        .content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .title {
+            width: 100%;
+            font-weight: 800;
+            color: $rc-gray;
+            font-size: 24px;
+          }
+          .img-container {
+            max-width: 60px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // TEAM SECTION
+  .team-section {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -206,8 +267,10 @@
     padding: 0 30px;
 
     .content-container {
-      background-color: rgba(255, 0, 0, 0.441);
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
       //min-width: 80vh;
 
       .title {
@@ -221,8 +284,6 @@
       }
     }
     .cards-container {
-      background-color: rgba(0, 55, 255, 0.441);
-
       display: flex;
       flex-direction: column;
       margin-top: 20px;
@@ -230,13 +291,137 @@
       align-items: center;
       width: 100%;
 
+      .card {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+
+        overflow: hidden;
+        width: 100%;
+        max-width: 400px;
+        background-color: hwb(230 0% 0% / 0.05);
+
+        .top-side {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          .img-container {
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            z-index: 1;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              aspect-ratio: 5/6;
+              max-width: 150px;
+              // estilos para la imagen del líder
+            }
+          }
+          .info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .title {
+              color: $rc-gray;
+              font-weight: 800;
+              font-size: 32px;
+            }
+
+            .position {
+              color: $rc-gray;
+              font-weight: 500;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .bot-side {
+          display: flex;
+          flex-direction: column;
+          padding: 30px;
+          .info-container {
+            .title {
+              color: skyblue;
+            }
+
+            .position {
+            }
+          }
+
+          .description {
+            color: $rc-gray-2;
+            font-weight: 300;
+            font-size: 16px;
+            text-align: justify;
+          }
+        }
+
+        /*
+        .info-container-md {
+          margin-left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+          z-index: 0;
+          background-color: #ebf0f4;
+          border-radius: 5px;
+
+          .front-layer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            box-sizing: border-box;
+            .name {
+              font-weight: bolder;
+              font-size: 24px;
+              //color: $rc-blue;
+              // estilos para el nombre
+            }
+
+            .job {
+              //margin-bottom: 20px;
+              // estilos para el cargo
+            }
+
+            .description {
+              text-align: justify;
+              font-size: 14px;
+              margin-top: 15px;
+              // estilos para la descripción
+            }
+          }
+          .back-layer {
+            width: -webkit-fill-available;
+            position: absolute;
+            z-index: 0;
+            display: flex;
+            justify-content: end;
+            height: 100%;
+          }
+        }
+          */
+      }
+
       //display: none;
+
+      /*
       .leader-card {
         display: flex;
         flex-direction: row-reverse;
         margin: 10px 0;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
         overflow: hidden;
+        width: 100%;
+        max-width: 500px;
 
         .img-container {
           width: 35%;
@@ -300,6 +485,8 @@
         }
       }
 
+      */
+
       .r-side {
         flex-direction: row-reverse;
         border-radius: 5px;
@@ -327,7 +514,7 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .main-about {
     // LAND SECTION
     .land-section {
@@ -353,9 +540,7 @@
     // MISION SECTION
     .mision-section {
       padding: 0 10%;
-
-      flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: center;
       column-gap: 10%;
       .info-container {
         display: flex;
@@ -364,9 +549,9 @@
         width: 100%;
         .title {
           display: block;
-          margin-bottom: 20px;
         }
         .paragraph {
+          text-align: center;
         }
       }
       .img-container {
@@ -388,7 +573,7 @@
     }
 
     // WE ARE SECTION
-    .we-are-sectinon {
+    .we-section {
       padding: 0 10%;
       gap: 20px;
       .container {
@@ -432,17 +617,55 @@
     }
 
     // LEADER SECTION
-    .leader-section {
+    .customers-section {
+      gap: 40px;
+      .title {
+      }
+      .brands {
+        justify-content: space-evenly;
+        .icon {
+          img {
+          }
+        }
+      }
+    }
+
+    //VALUES-SECTION
+    .values-section {
+      .title {
+      }
+      .cards-container {
+        flex-direction: row;
+        .card {
+          padding: 30px;
+          .description {
+          }
+          .content {
+            .title {
+            }
+            .img-container {
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // LEADER SECTION
+    .team-section {
       display: flex;
       flex-direction: row-reverse;
       width: 100%;
       overflow: hidden;
       box-sizing: border-box;
-      padding: 0 30px;
+      padding: 60px 30px;
       min-width: 80vh;
 
       .content-container {
-        background-color: rgba(255, 0, 0, 0.441);
+        //background-color: rgba(255, 0, 0, 0.1);
+        border-radius: 10;
+        max-width: 500px;
         .title {
           // estilos para el título
         }
@@ -454,14 +677,43 @@
         }
       }
       .cards-container {
-        background-color: rgba(0, 55, 255, 0.441);
-
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         justify-content: center;
         align-items: center;
         width: 100%;
+
+        .card {
+          flex-direction: row;
+          .top-side {
+            .img-container {
+              img {
+              }
+            }
+            .info-container {
+              .title {
+              }
+
+              .position {
+              }
+            }
+          }
+
+          .bot-side {
+            .info-container {
+              .title {
+              }
+
+              .position {
+              }
+            }
+
+            .description {
+            }
+          }
+        }
+        /*
         .leader-card {
           display: flex;
           flex-direction: row-reverse;
@@ -532,6 +784,8 @@
             }
           }
         }
+
+        */
 
         .r-side {
           flex-direction: row-reverse;

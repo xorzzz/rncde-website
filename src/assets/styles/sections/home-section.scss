@@ -43,7 +43,6 @@
     }
 
     .image-container {
-      height: 180px;
       margin: 20px;
       overflow: hidden;
       border-radius: 15px;
@@ -54,7 +53,7 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -315,7 +314,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
-        transition: all 10s ease-in-out;
+        transition: all 0.1s ease;
         .item {
           display: flex;
           width: 100%;
@@ -458,14 +457,14 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .main-home {
     .land-section {
       .image-container {
         right: 0;
         bottom: 0;
         height: auto;
-        width: 50%;
+        width: 60%;
 
         //img {
         //}
@@ -518,6 +517,9 @@
     .services-section {
       padding: 40px 10%;
       background-color: #f3fafe;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       .title {
         margin-bottom: 60px;
@@ -530,6 +532,7 @@
         column-gap: 40px;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 1200px;
         .card-container {
           width: 300px;
           gap: 10px;
@@ -570,7 +573,7 @@
     }
 
     .why-section {
-      padding: 0 10%;
+      padding: 80px 10%;
       margin-bottom: 40px;
 
       .main-container {
@@ -712,6 +715,176 @@
         max-width: 800px;
         .title {
           color: white;
+        }
+        .pharagraph {
+        }
+        .button-container {
+        }
+      }
+
+      .background {
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-home {
+    .land-section {
+      .image-container {
+        width: 60%;
+      }
+      .info-container {
+        .paragraph {
+        }
+      }
+    }
+
+    .about-section {
+      .info-container {
+        .paragraph {
+        }
+      }
+
+      .image-container {
+        img {
+        }
+      }
+
+      .title-mb {
+      }
+
+      .title-lg {
+      }
+    }
+
+    .services-section {
+      .title {
+      }
+      .container {
+        .card-container {
+          .top-side {
+            .title {
+            }
+          }
+          .bot-side {
+            .img-container {
+              img {
+              }
+            }
+
+            .paragraph {
+            }
+          }
+        }
+
+        .mb {
+        }
+      }
+      .button-container {
+      }
+    }
+
+    .why-section {
+      .main-container {
+        .left {
+          .header {
+            .img-container {
+              img {
+              }
+            }
+            .txt-container {
+              padding: 0;
+            }
+          }
+          .items-container {
+            .item {
+              .icon {
+                .xorz {
+                }
+              }
+              .text {
+              }
+            }
+          }
+          .info-container {
+            .paragraph {
+            }
+            .phrase-container {
+            }
+            .button-container {
+            }
+          }
+          .sep-container {
+            .separator {
+            }
+          }
+        }
+        .right {
+          .image-container {
+            img {
+            }
+          }
+          .phrase-container {
+          }
+        }
+      }
+      .items-container-mb {
+        .item {
+          .icon {
+            .xorz {
+            }
+          }
+          .text {
+          }
+        }
+      }
+    }
+
+    .do-section {
+      .side-a {
+        .title-count {
+        }
+        .info-sec {
+          .img-cont {
+            img {
+            }
+          }
+          .pharagraph {
+          }
+          .button-container-md {
+          }
+        }
+      }
+      .side-b {
+        .items-sec {
+          .item {
+            .icon-cont {
+              .circle-1 {
+              }
+              .circle-2 {
+              }
+              .icon {
+              }
+            }
+            .title {
+            }
+            .info-cont {
+              .title {
+              }
+              .text {
+              }
+            }
+          }
+        }
+      }
+      .button-container-mb {
+      }
+    }
+
+    .project-section {
+      .info {
+        .title {
         }
         .pharagraph {
         }

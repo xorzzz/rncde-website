@@ -6,11 +6,15 @@ defineProps({
   description: String,
   imgUrl: String,
   primaryColor: String,
-  secondaryColor: String
+  secondaryColor: String,
+  orientation: {
+    type: String,
+    default: 'horizontal'
+  }
 })
 </script>
 <template>
-  <div class="service-card" :style="{ backgroundColor: secondaryColor }">
+  <div class="service-card" :class="orientation" :style="{ backgroundColor: secondaryColor }">
     <div>
       <div class="top-text">SERVICIOS RUNCODE</div>
       <div class="title">{{ title }}</div>
@@ -124,9 +128,20 @@ defineProps({
   }
 }
 
+.vertical {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row !important;
+}
+
 @media (min-width: 760px) {
   .service-card {
     flex-direction: row;
+    padding: 40px;
     .top-text {
     }
 

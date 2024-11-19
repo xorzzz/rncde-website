@@ -16,7 +16,7 @@ const router = createRouter({
     },
     {
       path: '/how-do-we-do',
-      name: 'howWeDo',
+      name: 'howDo',
       component: () => import('../views/HowWeView.vue')
     },
     {
@@ -25,8 +25,8 @@ const router = createRouter({
       component: () => import('../views/ServicesView.vue')
     },
     {
-      path: '/why-runcode',
-      name: 'whyRuncode',
+      path: '/why-us',
+      name: 'whyUs',
       component: () => import('../views/WhyRuncodeView.vue')
     },
     {

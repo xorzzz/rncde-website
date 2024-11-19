@@ -81,13 +81,6 @@ const scrollLeft = () => {
       left: -200,
       behavior: 'smooth'
     })
-
-    /*
-    const { scrollLeft, scrollWidth, clientWidth } = cardsContainer.value
-    if (scrollLeft + clientWidth >= scrollWidth) {
-      isEndReached.value = true
-    }
-      */
   }
 }
 </script>

@@ -2,23 +2,32 @@
 .navbar-item {
   display: flex;
   flex-direction: column;
+  position: relative;
   nav {
     height: 4rem;
     display: flex;
-    justify-content: space-between;
     width: 100%;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+
     /*
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px)
     */
-    z-index: 1000;
+    z-index: 8;
 
     .logo {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
+      justify-content: start;
+      gap: 10px;
+      width: 100%;
+
+      .icon {
+        display: none;
+      }
 
       a {
         display: flex;
@@ -48,9 +57,12 @@
       margin-right: 20px;
       /* Ajusta el espaciado entre los enlaces si es necesario */
     }
+    .nav-link:hover {
+      color: #ffc107;
+    }
 
     .options {
-      display: flex;
+      display: none;
       align-items: center;
       gap: 2rem;
 
@@ -102,12 +114,6 @@
       }
     }
 
-    /* Cambiar el color al pasar el cursor sobre los enlaces */
-    .nav-link:hover {
-      color: #ffc107;
-      /* Cambia este valor al color deseado cuando se pasa el cursor */
-    }
-
     .dropmenu {
       width: 35px;
       height: 35px;
@@ -115,12 +121,101 @@
       align-items: center;
       justify-content: center;
       border-radius: 8px;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
+    }
+
+    .dropmenu:hover {
+      border: 2px solid $rc-sky;
     }
 
     .dropmenu:active {
-      color: #ffc107;
-      border: 3px solid #ffc107;
+      border: 2px solid $rc-sky;
+    }
+  }
+
+  .side-bar {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    z-index: 9;
+
+    .content {
+      position: absolute;
+      z-index: 12;
+      height: 100vh;
+
+      top: 0;
+      right: 0;
+
+      background-image: linear-gradient(-45deg, $rc-blue-2, $rc-blue);
+      width: 70%;
+      max-width: 400px;
+      margin-right: 0;
+      position: absolute;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 30px;
+
+      border-radius: 15px 0 0 0;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 1); /* sombra negra suave */
+
+      .separator {
+        width: 60%;
+        height: 1px;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .image-container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 40px 0;
+        .link {
+          color: $rc-white-1;
+          font-size: 18px;
+          font-weight: 400;
+          transition: all ease-in-out 0.1s;
+        }
+
+        .link:active {
+          color: $rc-sky;
+          font-size: 17px;
+        }
+
+        .active {
+          color: $rc-sky;
+          font-size: 18px;
+          font-weight: 400;
+          transition: all ease-in-out 0.1s;
+        }
+      }
+    }
+
+    .background {
+      position: absolute;
+      z-index: 11;
+      //background-color: rgba(0, 0, 0, 0.4);
+      //backdrop-filter: blur(2px);
+      height: 100vh;
+      width: 100%;
     }
   }
 
@@ -171,5 +266,94 @@
     background-color: rgba(255, 255, 255, 0.933); /* Blanco semitransparente al 20% */
     backdrop-filter: blur(20px); /* Desenfoque de 20px */
     -webkit-backdrop-filter: blur(20px); /* Compatibilidad con Safari */
+  }
+}
+
+@media (min-width: 620px) {
+  .navbar-item {
+    nav {
+      padding: 0 10%;
+
+      .logo {
+        .icon {
+          display: block;
+        }
+        a {
+          .a {
+          }
+          .b {
+          }
+        }
+      }
+
+      .links {
+      }
+
+      .nav-link {
+      }
+
+      .options {
+        display: flex;
+        a {
+          .text {
+          }
+          .line {
+          }
+          .line-active {
+          }
+          .hide {
+          }
+        }
+      }
+
+      .dropmenu {
+        display: none;
+      }
+    }
+
+    .side-bar {
+      display: none !important;
+      color: red;
+      .content {
+        .separator {
+        }
+
+        .image-container {
+          img {
+          }
+        }
+
+        a {
+        }
+
+        .container {
+          .link {
+          }
+          .active {
+          }
+        }
+      }
+
+      .background {
+      }
+    }
+
+    .drop-menu-active {
+      a {
+      }
+    }
+
+    .slide-fade-enter-active {
+    }
+    .slide-fade-leave-active {
+    }
+    .slide-fade-enter-from,
+    .slide-fade-leave-to {
+    }
+
+    .bg-transparent {
+    }
+    .bg-color {
+    }
   }
 }

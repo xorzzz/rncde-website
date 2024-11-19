@@ -1,33 +1,13 @@
 <script setup>
 // eslint-disable-next-line no-unused-vars
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import NavbarItem from './components/NavbarItem.vue'
 import FooterItem from './components/FooterItem.vue'
 //import ButtonNav from './components/ButtonNav.vue'
 
 const route = useRoute()
-const prevScrollY = ref(0)
-const hidemenu = ref(true)
-
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY
-  const navBar = document.querySelector('.na')
-
-  if (currentScrollY > prevScrollY.value) {
-    // Hacer que el Navbar se esconda cuando haces scroll hacia abajo
-    navBar.style.top = `-${navBar.offsetHeight}px`
-    hidemenu.value = false
-    prevScrollY.value = currentScrollY
-  } else if (prevScrollY.value - currentScrollY > 50) {
-    console.log('sube:', prevScrollY.value - currentScrollY)
-    // Hacer que el Navbar aparezca cuando haces scroll hacia arriba
-    navBar.style.top = '0'
-    hidemenu.value = true
-  }
-})
-
-const routesLightColor = ['/services', '/why-runcode']
+const routesLightColor = ['/services', '/why-runcode', '/how-do-we-do', '/contact']
 
 //observamos si hay algun cambio en la ruta para alertar al footer que cambie de color
 const isServicesPath = computed(() => route.path === '/why-runcode')
@@ -39,11 +19,7 @@ const activateLightText = computed(() => routesLightColor.includes(route.path))
 HEADER AND FOOTER, DE AQUI SE ENVIAN LLAMAN LOS COMPONENTES DESDE ROUTER
   -->
   <div class="main-xdz">
-    <NavbarItem
-      :hidemenu="hidemenu"
-      :startColor="activateLightText ? 'light' : 'dark'"
-      class="na"
-    ></NavbarItem>
+    <NavbarItem :startColor="activateLightText ? 'light' : 'dark'" class="na"></NavbarItem>
     <div id="marco" style="width: 100%">
       <RouterView class="ad" v-slot="{ Component }">
         <transition name="fade" mode="out-in">
@@ -65,6 +41,7 @@ HEADER AND FOOTER, DE AQUI SE ENVIAN LLAMAN LOS COMPONENTES DESDE ROUTER
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
   .na {
     position: fixed;
     z-index: 2;

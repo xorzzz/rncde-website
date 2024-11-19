@@ -216,7 +216,6 @@ const how_do = ref({
               <div class="text">Confianza</div>
             </div>
           </div>
-
           <div class="info-container">
             <div>
               <div class="paragraph rc-text">
@@ -228,7 +227,7 @@ const how_do = ref({
               </div>
               <div class="button-container">
                 <div class="aling-y">
-                  <RouterLink to="/why-runcode" class="no-deco">
+                  <RouterLink to="/why-us<" y class="no-deco">
                     <ButtonSolid primaryColor="bg-blue">
                       Explorar más
                       <i class="fi fi-rr-arrow-small-right"></i>
@@ -413,7 +412,7 @@ const how_do = ref({
           Cuentanos tu idea, nosotros la perfeccionamos en tiempo y espacio. Existe un contexto en
           el que todo es posible y nosotros sabemos hacerlo.
         </p>
-        <RouterLink to="/contact-us" class="no-deco">
+        <RouterLink to="/contact" class="no-deco">
           <ButtonSolid primaryColor="bg-sky">
             Explorar más
             <i class="fi fi-rr-arrow-small-right"></i>

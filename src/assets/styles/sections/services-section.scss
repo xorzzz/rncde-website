@@ -15,6 +15,7 @@
     .first-section {
       width: 100%;
       max-width: 400px;
+
       .title {
         color: white;
       }
@@ -85,6 +86,13 @@
     color: $rc-gray-2;
     gap: 30px;
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+
     .item {
       margin-bottom: 40px;
       display: flex;
@@ -132,7 +140,7 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   .main-services {
     .land {
       flex-direction: row;
@@ -167,14 +175,29 @@
 
       .img-container {
         display: block;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
         img {
         }
+      }
+
+      .img-container:hover {
+        box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
       }
     }
 
     .services-container {
       display: flex;
       align-items: center;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 900px;
+        gap: 20px;
+      }
+
       .item {
         .title-mb {
         }
