@@ -1,0 +1,34 @@
+@startuml ejercicio_3
+
+class DispositivoElectronico {
+    +nombre: String
+    +uso: String
+}
+
+class Computadora {
+    +monitor: String
+    +teclado: Boolean
+    +raton: Boolean
+    +procesador: String
+    +memoria: String
+}
+
+class Telefono {
+    +pantallaTactil: Boolean
+    +bateria: String
+    +camara: Boolean
+    +altavoces: Boolean
+    +microfono: Boolean
+}
+
+class Tablet {
+    +pantalla: String
+    +bateria: String
+    +procesador: String
+    +memoria: String
+}
+
+DispositivoElectronico "1" --> "0..*" Computadora : incluye
+DispositivoElectronico "1" --> "0..*" Telefono : incluye
+DispositivoElectronico "1" --> "0..*" Tablet : incluye
+@enduml

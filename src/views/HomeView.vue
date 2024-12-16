@@ -7,6 +7,7 @@ import ButtonSkyItem from '@/components/ButtonSkyItem.vue'
 // eslint-disable-next-line no-unused-vars
 import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
 import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
+import SectionRC from '@/components/Utils/SectionRC.vue'
 
 const how_do = ref({
   item_1: false,
@@ -21,43 +22,48 @@ const how_do = ref({
 <template>
   <div class="main-home">
     <!--HOME-->
+
     <div class="land-section">
-      <div class="info-container">
-        <h1 class="rc-title">
-          MÁS QUE SOFTWARE CALIDAD HECHA <span class="text-sky">CÓDIGO</span>
+      <SectionRC class="info-container">
+        <h1 class="rc-title text-blue">
+          MÁS QUE SOFTWARE CALIDAD HECHA <span class="rc-title text-sky">CÓDIGO</span>
         </h1>
         <p class="paragraph rc-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ratione neque vero
-          eligendi eum fugit unde quas ab. Vero molestias nostrum a saepe perspiciatis official.
+          En un mundo digital en constante evolución, creamos herramientas que transforman ideas en
+          realidades tangibles. Nos especializamos en diseñar soluciones innovadoras que no solo
+          resuelven problemas, sino que impulsan el crecimiento y generan impacto a largo plazo.
         </p>
         <div class="aling-y">
           <RouterLink to="/about-us" class="no-deco">
-            <ButtonSolid primaryColor="bg-sky">
+            <ButtonSolid primaryColor="sky" textColor="white  ">
               Explorar más
               <i class="fi fi-rr-arrow-small-right"></i>
             </ButtonSolid>
           </RouterLink>
         </div>
-      </div>
+      </SectionRC>
+
       <div class="image-container">
         <img src="@/assets/images/home/land.svg" alt="home-land" />
       </div>
     </div>
 
     <!--ABOUT US-->
-    <div class="about-section">
+    <SectionRC class="about-section">
       <div class="info-container">
-        <h2 class="rc-title title-lg">SOBRE NOSOTROS</h2>
+        <h2 class="rc-subtitle title-lg">SOBRE NOSOTROS</h2>
         <p class="rc-text paragraph">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero at veritatis, accusamus
-          soluta sunt asperiores obcaecati, necessitatibus, voluptate expedita rem autem! Eius
-          minima voluptatem provident quod, molestias at fugiat! Aliquam.
+          Nos destacamos por ofrecer un enfoque integral y estratégico que responde a las
+          necesidades específicas de cada cliente. Nuestro equipo multidisciplinar, altamente
+          capacitado y con experiencia certificada, trabaja en áreas clave como finanzas, gestión de
+          relaciones con clientes, recursos humanos, gestión de proyectos, compras y cadena de
+          suministro, con un enfoque especial en el mercado colombiano.
         </p>
         <div class="aling-y">
           <RouterLink to="/about-us" class="no-deco">
-            <ButtonSolid primaryColor="bg-sky" iconPosition="left">
-              ¡Conócenos!
+            <ButtonSolid primaryColor="blue" textColor="white">
               <i class="fi fi-rr-clipboard-user"></i>
+              ¡Conócenos!
             </ButtonSolid>
           </RouterLink>
         </div>
@@ -65,131 +71,121 @@ const how_do = ref({
       <div class="image-container">
         <img src="@/assets/images/home/about.png" alt="home-about" />
       </div>
-      <h2 class="rc-title title-mb">SOBRE NOSOTROSS</h2>
-    </div>
+      <h2 class="rc-subtitle title-mb">SOBRE NOSOTROSS</h2>
+    </SectionRC>
 
     <!--SERVICES-->
     <div class="services-section">
-      <h2 class="title rc-title title-lg">NUESTROS SERVICIOS</h2>
-      <div class="container">
-        <!--V-FOR SERVICES, CALLING FROM A JSON FILE OR SOMETHING SIMILAR -->
-        <div class="card-container">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
+      <SectionRC class="content">
+        <h2 class="rc-subtitle rc-title title-lg">NUESTROS SERVICIOS</h2>
+        <div class="container">
+          <!--V-FOR SERVICES, CALLING FROM A JSON FILE OR SOMETHING SIMILAR -->
+          <div class="card-container">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">DESARROLLO WEB</h3>
             </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Asesoramos cada estrategia y le damos el diseño adecuado para afrontar los desafíos
+                empresariales reales. Contemplamos las soluciones que oscilan entre el producto y el
+                servicio.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="card-container">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
+          <div class="card-container">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">DESARROLLO DE APLICACIONES</h3>
             </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
+                eaque optio sed eveniet? Eos repellat soluta autem itaque?
+              </p>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">CONSULTORÍAS TIC</h3>
+            </div>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Ofrecemos soluciones inteligentes, a la medida de sus necesidades. Nuestro sello de
+                garantía son sus ideas plasmadas en un desarrollo innovador.
+              </p>
+            </div>
+          </div>
+          <div class="card-container mb">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">VIGILANCIA Y TRANSFERENCIA ELECTRÓNICA</h3>
+            </div>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Estamos a la vanguardia de las últimas tendencias y nuestro propósito es consolidar
+                ese objetivo, como un objetivo común.
+              </p>
+            </div>
+          </div>
+          <div class="card-container mb">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">SERVICIOS SAP</h3>
+            </div>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
+                eaque optio sed eveniet? Eos repellat soluta autem itaque?
+              </p>
+            </div>
+          </div>
+          <div class="card-container mb">
+            <div class="top-side">
+              <h3 class="title-item rc-subtitle-2">SERVICIO ADICIONAL</h3>
+            </div>
+            <div class="bot-side">
+              <div class="img-container">
+                <img src="@/assets/images/home/services/1.png" alt="image-service" />
+              </div>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
+                eaque optio sed eveniet? Eos repellat soluta autem itaque?
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card-container">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
-            </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
-          </div>
+        <div class="button-container">
+          <RouterLink to="/services" class="no-deco">
+            <ButtonOutline primaryColor="sky" textColor="blue">
+              Ver más
+              <i class="fi fi-rr-arrow-small-right"></i>
+            </ButtonOutline>
+          </RouterLink>
         </div>
-        <div class="card-container mb">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
-            </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
-          </div>
-        </div>
-        <div class="card-container mb">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
-            </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
-          </div>
-        </div>
-        <div class="card-container mb">
-          <div class="top-side">
-            <h3 class="title-item rc-subtitle">Vigilancia y Transferencia Tecnológica</h3>
-          </div>
-          <div class="bot-side">
-            <div class="img-container">
-              <img src="@/assets/images/home/services/1.png" alt="image-service" />
-            </div>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, tenetur odit
-              eaque optio sed eveniet? Eos repellat soluta autem itaque?
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="button-container">
-        <RouterLink to="/services" class="no-deco">
-          <ButtonOutline primaryColor="bg-sky" textColor="text-blue">
-            Ver más
-            <i class="fi fi-rr-arrow-small-right"></i>
-          </ButtonOutline>
-        </RouterLink>
-      </div>
+      </SectionRC>
     </div>
 
     <!--WHY RUNCODE?-->
-    <div class="why-section">
+    <SectionRC class="why-section">
       <div class="main-container">
         <div class="left">
           <!--checked-->
           <div class="header">
-            <div class="img-container">
-              <img src="@/assets/images/home/why-runcode-title.png" alt="image-service" />
-            </div>
-            <div class="txt-container">
-              <h2 class="rc-title text-white">
-                ¿POR QUE <span class="rc-title text-sky">RUNCODE</span>?
-              </h2>
-            </div>
+            <h2 class="rc-subtitle">¿POR QUE RUN<span class="rc-subtitle text-sky">CODE</span>?</h2>
           </div>
-
-          <div class="sep-container">
-            <div class="separator"></div>
-            <div class="separator"></div>
-          </div>
-
           <div class="items-container">
             <div class="item" style="background-color: #5a46d799">
               <div class="icon">
@@ -217,27 +213,32 @@ const how_do = ref({
             </div>
           </div>
           <div class="info-container">
-            <div>
-              <div class="paragraph rc-text">
-                La eficiencia y la eficacia de nuestras soluciones, son producto de nuestro
-                compromiso con valores sólidos corporativos y con cada objetivo de nuestros
-                clientes. <br />
-                Luchamos por relaciones a largo plazo fundamentadas en la calidad de servicio y
-                visión del futuro
-              </div>
-              <div class="button-container">
-                <div class="aling-y">
-                  <RouterLink to="/why-us<" y class="no-deco">
-                    <ButtonSolid primaryColor="bg-blue">
-                      Explorar más
-                      <i class="fi fi-rr-arrow-small-right"></i>
-                    </ButtonSolid>
-                  </RouterLink>
-                </div>
+            <div class="paragraph">
+              <p class="rc-text">
+                Trabajamos para ofrecer respuestas adaptadas a cada necesidad, asegurándonos de que
+                cada solución sea precisa, innovadora y sostenible. Nos enfocamos en construir
+                relaciones a largo plazo basadas en la confianza, la calidad del servicio y una
+                visión compartida hacia el futuro, creando alianzas estratégicas que marquen la
+                diferencia.
+              </p>
+              <p class="rc-text">
+                La eficiencia y la eficacia de nuestras soluciones son el reflejo de un profundo
+                compromiso con valores corporativos sólidos y con el cumplimiento de los objetivos
+                de nuestros clientes.
+              </p>
+            </div>
+            <div class="button-container">
+              <div class="aling-y">
+                <RouterLink to="/why-us" y class="no-deco">
+                  <ButtonSolid primaryColor="sky" textColor="white">
+                    Explorar más
+                    <i class="fi fi-rr-arrow-small-right"></i>
+                  </ButtonSolid>
+                </RouterLink>
               </div>
             </div>
             <div class="phrase-container">
-              <h2 class="rc-subtitle">“SU EMPRESA LO NECESITA NOSOTROS LO DESARROLLAMOS”</h2>
+              <h2 class="rc-subtitle-2">“SU EMPRESA LO NECESITA NOSOTROS LO DESARROLLAMOS”</h2>
             </div>
           </div>
         </div>
@@ -246,7 +247,7 @@ const how_do = ref({
             <img src="@/assets/images/home/why-runcode-mb.png" alt="img-mb" />
           </div>
           <div class="phrase-container">
-            <h2 class="rc-subtitle">“SU EMPRESA LO NECESITA NOSOTROS LO DESARROLLAMOS”</h2>
+            <h2 class="rc-subtitle-2">“SU EMPRESA LO NECESITA NOSOTROS LO DESARROLLAMOS”</h2>
           </div>
         </div>
       </div>
@@ -277,25 +278,24 @@ const how_do = ref({
           <div class="text">Confianza</div>
         </div>
       </div>
-    </div>
+    </SectionRC>
 
     <!--HOW DO WE DO IT?-->
-    <div class="do-section">
+    <SectionRC class="do-section">
       <div class="side-a">
-        <div class="title-cont">
-          <h2 class="rc-title">¿COMO LO HACEMOS?</h2>
-        </div>
         <div class="info-sec">
           <div class="img-cont">
             <img src="@/assets/images/home/how-do.svg" alt=" a" />
           </div>
           <p class="pharagraph rc-text">
-            La eficiencia y la eficacia de nuestras soluciones, son producto de nuestro compromiso
-            con valores sólidos.
+            La eficiencia y la eficacia de nuestras soluciones son el resultado directo de nuestro
+            compromiso con valores corporativos sólidos y con el cumplimiento de cada uno de los
+            objetivos de nuestros clientes. Nos dedicamos a entender sus necesidades y diseñar
+            estrategias que no solo cumplan con sus expectativas, sino que también las superen.
           </p>
           <div class="button-container-md">
             <RouterLink to="/how-do-we-do" class="no-deco">
-              <ButtonSolid primaryColor="bg-sky">
+              <ButtonSolid primaryColor="blue" textColor="white">
                 Explorar más
                 <i class="fi fi-rr-arrow-small-right"></i>
               </ButtonSolid>
@@ -303,7 +303,10 @@ const how_do = ref({
           </div>
         </div>
       </div>
-      <div class="side-b">
+      <div class="side-b" style="display: flex; flex-direction: column">
+        <div class="title-cont" style="margin-bottom: 30px">
+          <h2 class="rc-subtitle">¿COMO LO HACEMOS?</h2>
+        </div>
         <div class="items-sec">
           <div class="item" @mouseenter="how_do.item_1 = true" @mouseleave="how_do.item_1 = false">
             <div class="icon-cont">
@@ -312,11 +315,11 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #aceeb7"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Análisis de requerimientos requerimientos</h3>
+              <h3 class="title rc-text-2">Análisis de requerimientos requerimientos</h3>
 
               <p :class="['p', { 'p--visible': how_do.item_1 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Estudiamos a fondo las necesidades del cliente para definir los objetivos y desafíos
+                del proyecto, asegurando que cada solución esté alineada con sus expectativas
               </p>
             </div>
           </div>
@@ -328,10 +331,10 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #aceaee"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Diseño y arquitectura de la solución</h3>
+              <h3 class="title rc-text-2">Diseño y arquitectura de la solución</h3>
               <p :class="['p', { 'p--visible': how_do.item_2 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Diseñamos una solución escalable y eficiente, creando una arquitectura flexible que
+                se adapte a las necesidades presentes y futuras del cliente
               </p>
             </div>
           </div>
@@ -343,10 +346,10 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #acbbee"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Desarrollo y codificación de la solución</h3>
+              <h3 class="title rc-text-2">Desarrollo y codificación de la solución</h3>
               <p :class="['p', { 'p--visible': how_do.item_3 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Desarrollamos y codificamos utilizando las mejores tecnologías y estándares de
+                calidad, asegurando soluciones confiables y fáciles de mantener.
               </p>
             </div>
           </div>
@@ -358,10 +361,11 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #cdacee"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Pruebas de calidad</h3>
+              <h3 class="title rc-text-2">Pruebas de calidad</h3>
               <p :class="['p', { 'p--visible': how_do.item_4 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Realizamos pruebas rigurosas para verificar el rendimiento, la seguridad y la
+                usabilidad, asegurando que la solución funcione perfectamente en todos los
+                escenarios.
               </p>
             </div>
           </div>
@@ -373,10 +377,10 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #eeace0"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Despliegue e implementación</h3>
+              <h3 class="title rc-text-2">Despliegue e implementación</h3>
               <p :class="['p', { 'p--visible': how_do.item_5 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Implementamos la solución de manera fluida, garantizando una transición sin
+                problemas y una integración exitosa con los sistemas existentes.
               </p>
             </div>
           </div>
@@ -387,10 +391,10 @@ const how_do = ref({
               <div class="circle-2" style="background-color: #eeacac"></div>
             </div>
             <div class="text-cont">
-              <h3 class="title rc-text">Mantenimiento y soporte</h3>
+              <h3 class="title rc-text-2">Mantenimiento y soporte</h3>
               <p :class="['p', { 'p--visible': how_do.item_6 }]" class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam placeat modi accusamus
-                eveniet numquam cupiditate!
+                Ofrecemos soporte continuo y mantenimiento regular para asegurar que la solución
+                siga operando eficientemente y se adapte a las necesidades cambiantes.
               </p>
             </div>
           </div>
@@ -398,14 +402,17 @@ const how_do = ref({
       </div>
 
       <div class="button-container-mb">
-        <RouterLink to="/how-we-do">
-          <ButtonItem>Conoce más</ButtonItem>
+        <RouterLink to="/how-do-we-do" class="no-deco">
+          <ButtonSolid primaryColor="blue" textColor="white">
+            Explorar más
+            <i class="fi fi-rr-arrow-small-right"></i>
+          </ButtonSolid>
         </RouterLink>
       </div>
-    </div>
+    </SectionRC>
 
     <!--DO YOU HAVE A PROJECT IN MIND?-->
-    <div class="project-section">
+    <SectionRC bg-class="project-section" class="content">
       <div class="info">
         <h2 class="title rc-title text-white">¿TIENES UN PROYECTO EN MENTE?</h2>
         <p class="pharagraph">
@@ -413,13 +420,13 @@ const how_do = ref({
           el que todo es posible y nosotros sabemos hacerlo.
         </p>
         <RouterLink to="/contact" class="no-deco">
-          <ButtonSolid primaryColor="bg-sky">
+          <ButtonSolid primaryColor="sky" textColor="blue">
             Explorar más
             <i class="fi fi-rr-arrow-small-right"></i>
           </ButtonSolid>
         </RouterLink>
       </div>
-    </div>
+    </SectionRC>
   </div>
 </template>
 

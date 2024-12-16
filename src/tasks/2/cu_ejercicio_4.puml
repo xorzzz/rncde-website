@@ -1,0 +1,31 @@
+@startuml cu_ejercicio_4
+
+actor Usuario
+actor Administrador
+
+rectangle Sistema {
+    usecase "Seleccionar productos y agregar al carrito" as UC1
+    usecase "Realizar pago seguro" as UC2
+    usecase "Registrar cuenta y almacenar datos de pago" as UC3
+    usecase "Ver historial de compras" as UC4
+    usecase "Generar facturas electrónicas" as UC5
+    usecase "Gestionar catálogo de productos" as UC6
+    usecase "Configurar políticas de envío y promociones" as UC7
+    usecase "Recibir correo de confirmación de pedido" as UC8
+    usecase "Enviar notificaciones de estado de productos y pagos" as UC9
+    usecase "Generar informes de ventas y analizar tendencias" as UC10
+    usecase "Integrar con servicios de envío" as UC11
+}
+
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+Usuario --> UC8
+Usuario --> UC9
+Administrador --> UC6
+Administrador --> UC7
+Administrador --> UC10
+Sistema --> UC11
+@enduml

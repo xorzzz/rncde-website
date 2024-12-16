@@ -1,11 +1,13 @@
 <script setup>
+import SectionRC from '@/components/Utils/SectionRC.vue'
 import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
 import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
+import ButtonColor from '@/components/Buttons/ButtonColor.vue'
 </script>
 
 <template>
   <div class="contact-main">
-    <div class="content pglo">
+    <SectionRC class="content">
       <form class="form-container">
         <div class="title">CONTACTANOS</div>
         <div class="name-container">
@@ -15,8 +17,8 @@ import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
         <input type="email" placeholder="Correo" name="email" required />
         <textarea placeholder="Your message" name="message" required> </textarea>
         <div class="button-container">
-          <ButtonSolid primaryColor="bg-sky" type="submit"> Enviar </ButtonSolid>
-          <ButtonOutline primaryColor="bg-sky" type="reset"> Borrar </ButtonOutline>
+          <ButtonSolid primaryColor="sky" type="submit"> Enviar </ButtonSolid>
+          <ButtonOutline primaryColor="sky" textColor="blue" type="reset"> Borrar </ButtonOutline>
         </div>
       </form>
       <div class="info-container">
@@ -82,32 +84,36 @@ import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
           <div class="whatsapp-content">
             <div class="text">¿Prefieres enviarnos un mensaje por whatsapp?</div>
             <div class="button-container">
-              <div class="button-wa">
-                <div class="icon">
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.8125 4.13751C20.6663 2.98014 19.3013 2.06246 17.7969 1.43796C16.2925 0.813455 14.6789 0.49461 13.05 0.500006C6.225 0.500006 0.6625 6.06251 0.6625 12.8875C0.6625 15.075 1.2375 17.2 2.3125 19.075L0.5625 25.5L7.125 23.775C8.9375 24.7625 10.975 25.2875 13.05 25.2875C19.875 25.2875 25.4375 19.725 25.4375 12.9C25.4375 9.58751 24.15 6.47501 21.8125 4.13751ZM13.05 23.1875C11.2 23.1875 9.3875 22.6875 7.8 21.75L7.425 21.525L3.525 22.55L4.5625 18.75L4.3125 18.3625C3.28443 16.7213 2.73866 14.8241 2.7375 12.8875C2.7375 7.21251 7.3625 2.58751 13.0375 2.58751C15.7875 2.58751 18.375 3.66251 20.3125 5.61251C21.272 6.56734 22.0324 7.70318 22.5495 8.95417C23.0667 10.2051 23.3302 11.5464 23.325 12.9C23.35 18.575 18.725 23.1875 13.05 23.1875ZM18.7 15.4875C18.3875 15.3375 16.8625 14.5875 16.5875 14.475C16.3 14.375 16.1 14.325 15.8875 14.625C15.675 14.9375 15.0875 15.6375 14.9125 15.8375C14.7375 16.05 14.55 16.075 14.2375 15.9125C13.925 15.7625 12.925 15.425 11.75 14.375C10.825 13.55 10.2125 12.5375 10.025 12.225C9.85 11.9125 10 11.75 10.1625 11.5875C10.3 11.45 10.475 11.225 10.625 11.05C10.775 10.875 10.8375 10.7375 10.9375 10.5375C11.0375 10.325 10.9875 10.15 10.9125 10C10.8375 9.85001 10.2125 8.32501 9.9625 7.70001C9.7125 7.10001 9.45 7.17501 9.2625 7.16251H8.6625C8.45 7.16251 8.125 7.23751 7.8375 7.55001C7.5625 7.86251 6.7625 8.61251 6.7625 10.1375C6.7625 11.6625 7.875 13.1375 8.025 13.3375C8.175 13.55 10.2125 16.675 13.3125 18.0125C14.05 18.3375 14.625 18.525 15.075 18.6625C15.8125 18.9 16.4875 18.8625 17.025 18.7875C17.625 18.7 18.8625 18.0375 19.1125 17.3125C19.375 16.5875 19.375 15.975 19.2875 15.8375C19.2 15.7 19.0125 15.6375 18.7 15.4875Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-                <div class="text">Whatsapp</div>
+              <div class="button-container">
+                <ButtonColor primary-color="#25d366">
+                  <div class="icon">
+                    <svg
+                      width="26"
+                      height="26"
+                      viewBox="0 0 26 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.8125 4.13751C20.6663 2.98014 19.3013 2.06246 17.7969 1.43796C16.2925 0.813455 14.6789 0.49461 13.05 0.500006C6.225 0.500006 0.6625 6.06251 0.6625 12.8875C0.6625 15.075 1.2375 17.2 2.3125 19.075L0.5625 25.5L7.125 23.775C8.9375 24.7625 10.975 25.2875 13.05 25.2875C19.875 25.2875 25.4375 19.725 25.4375 12.9C25.4375 9.58751 24.15 6.47501 21.8125 4.13751ZM13.05 23.1875C11.2 23.1875 9.3875 22.6875 7.8 21.75L7.425 21.525L3.525 22.55L4.5625 18.75L4.3125 18.3625C3.28443 16.7213 2.73866 14.8241 2.7375 12.8875C2.7375 7.21251 7.3625 2.58751 13.0375 2.58751C15.7875 2.58751 18.375 3.66251 20.3125 5.61251C21.272 6.56734 22.0324 7.70318 22.5495 8.95417C23.0667 10.2051 23.3302 11.5464 23.325 12.9C23.35 18.575 18.725 23.1875 13.05 23.1875ZM18.7 15.4875C18.3875 15.3375 16.8625 14.5875 16.5875 14.475C16.3 14.375 16.1 14.325 15.8875 14.625C15.675 14.9375 15.0875 15.6375 14.9125 15.8375C14.7375 16.05 14.55 16.075 14.2375 15.9125C13.925 15.7625 12.925 15.425 11.75 14.375C10.825 13.55 10.2125 12.5375 10.025 12.225C9.85 11.9125 10 11.75 10.1625 11.5875C10.3 11.45 10.475 11.225 10.625 11.05C10.775 10.875 10.8375 10.7375 10.9375 10.5375C11.0375 10.325 10.9875 10.15 10.9125 10C10.8375 9.85001 10.2125 8.32501 9.9625 7.70001C9.7125 7.10001 9.45 7.17501 9.2625 7.16251H8.6625C8.45 7.16251 8.125 7.23751 7.8375 7.55001C7.5625 7.86251 6.7625 8.61251 6.7625 10.1375C6.7625 11.6625 7.875 13.1375 8.025 13.3375C8.175 13.55 10.2125 16.675 13.3125 18.0125C14.05 18.3375 14.625 18.525 15.075 18.6625C15.8125 18.9 16.4875 18.8625 17.025 18.7875C17.625 18.7 18.8625 18.0375 19.1125 17.3125C19.375 16.5875 19.375 15.975 19.2875 15.8375C19.2 15.7 19.0125 15.6375 18.7 15.4875Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="text">Whatsapp</div>
+                </ButtonColor>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </SectionRC>
     <div class="background">
-      <div class="blue-container">
-        <div class="img-container">
-          <img src="@/assets/images/contact/contact-image.svg" alt="" />
+      <div class="section-container f-blue-container">
+        <div class="row-container c-blue-container">
+          <div class="img-container">
+            <img src="@/assets/images/contact/contact-image.svg" alt="" />
+          </div>
         </div>
       </div>
       <div class="white-container"></div>
@@ -118,7 +124,4 @@ import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
 <style lang="scss">
 @import '@/assets/styles/sections/contact-section.scss';
 @import '@/assets/styles/variables.scss';
-
-.pglo {
-}
 </style>

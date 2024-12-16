@@ -1,0 +1,78 @@
+@startuml md_ejercicio_4
+
+class Usuario {
+    - id : int
+    - nombre : String
+    - email : String
+    - datosPago : List<MetodoPago>
+    - historialCompras : List<Pedido>
+}
+
+class Producto {
+    - id : int
+    - nombre : String
+    - descripcion : String
+    - precio : float
+    - disponibilidad : int
+}
+
+class Carrito {
+    - id : int
+    - usuarioId : int
+    - productos : List<Producto>
+    - total : float
+}
+
+class Pedido {
+    - id : int
+    - usuarioId : int
+    - productos : List<Producto>
+    - fechaCompra : Date
+    - estado : String
+    - factura : Factura
+}
+
+class Factura {
+    - id : int
+    - numero : String
+    - fechaEmision : Date
+    - total : float
+}
+
+class MetodoPago {
+    - id : int
+    - tipo : String
+    - detalles : String
+    - esPredeterminado : Boolean
+}
+
+class Politica {
+    - id : int
+    - tipo : String
+    - descripcion : String
+}
+
+class Envio {
+    - id : int
+    - pedidoId : int
+    - direccion : String
+    - costo : float
+    - fechaEstimada : Date
+}
+
+class Informe {
+    - id : int
+    - periodo : String
+    - ventasTotales : float
+    - productosMasVendidos : List<Producto>
+    - metodosPagoPreferidos : List<MetodoPago>
+}
+
+Usuario "1" --> "*" Pedido
+Pedido "1" --> "1" Factura
+Pedido "1" --> "1" Envio
+Usuario "1" --> "*" MetodoPago
+Carrito "1" --> "*" Producto
+Producto "1" --> "*" Politica
+Administrador "1" --> "*" Informe
+@enduml

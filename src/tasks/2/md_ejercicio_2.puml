@@ -1,0 +1,60 @@
+@startuml md_ejercicio_2
+
+class Usuario {
+    - id : int
+    - nombre : String
+    - email : String
+    - rol : String
+}
+
+class Tarea {
+    - id : int
+    - titulo : String
+    - descripcion : String
+    - estado : String
+    - fechaLimite : Date
+    - prioridad : String
+    - proyectoId : int
+    - asignadoA : int
+    - comentarios : List<Comentario>
+}
+
+class Comentario {
+    - id : int
+    - autorId : int
+    - contenido : String
+    - fecha : Date
+}
+
+class Proyecto {
+    - id : int
+    - nombre : String
+    - descripcion : String
+    - calendario : Calendario
+}
+
+class Calendario {
+    - id : int
+    - fechasImportantes : List<Date>
+}
+
+class Informe {
+    - id : int
+    - tipo : String
+    - fechaGeneracion : Date
+    - contenido : String
+}
+
+class Integracion {
+    - id : int
+    - tipo : String
+    - configuracion : String
+}
+
+Usuario "1" --> "*" Tarea : Crea/Asigna
+Tarea "1" --> "*" Comentario : Tiene
+Tarea "1" --> "1" Proyecto
+Proyecto "1" --> "1" Calendario
+Usuario "1" --> "*" Informe : Genera
+Usuario "1" --> "*" Integracion : Configura
+@enduml

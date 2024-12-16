@@ -1,0 +1,34 @@
+@startuml ejercicio_4
+
+class Planta {
+    +tipo: String
+    +entorno: String
+    +funcion: String
+}
+
+class Arbol {
+    +raices: Boolean
+    +tronco: Boolean
+    +hojas: Boolean
+    +frutos: Boolean
+}
+
+class Arbusto {
+    +raices: Boolean
+    +tallosMultiples: Boolean
+    +hojas: Boolean
+    +espinas: Boolean
+}
+
+class Flor {
+    +petalos: Boolean
+    +tallo: Boolean
+    +hojas: Boolean
+    +polen: Boolean
+    +brotes: Boolean
+}
+
+Planta "1" --> "0..*" Arbol : incluye
+Planta "1" --> "0..*" Arbusto : incluye
+Planta "1" --> "0..*" Flor : incluye
+@enduml

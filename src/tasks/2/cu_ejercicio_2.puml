@@ -1,0 +1,38 @@
+@startuml cu_ejercicio_2
+
+actor Empleado
+actor Supervisor
+actor Administrador
+
+rectangle Sistema {
+    usecase "Crear tareas" as UC1
+    usecase "Asignar tareas a otros miembros" as UC2
+    usecase "Actualizar el estado de tareas" as UC3
+    usecase "Ver el estado de las tareas" as UC4
+    usecase "Recibir notificaciones sobre actualizaciones" as UC5
+    usecase "Agregar comentarios a tareas" as UC6
+    usecase "Establecer fechas de entrega" as UC7
+    usecase "Evaluar el rendimiento de empleados" as UC8
+    usecase "Gestionar usuarios y roles" as UC9
+    usecase "Generar informes detallados" as UC10
+    usecase "Configurar integraciones con herramientas externas" as UC11
+    usecase "Organizar tareas dentro de proyectos" as UC12
+    usecase "Ver calendarios compartidos de proyectos" as UC13
+    usecase "Revisar estadísticas y métricas de productividad" as UC14
+}
+
+Empleado --> UC1
+Empleado --> UC2
+Empleado --> UC3
+Empleado --> UC4
+Empleado --> UC5
+Supervisor --> UC6
+Supervisor --> UC7
+Supervisor --> UC8
+Supervisor --> UC12
+Supervisor --> UC13
+Supervisor --> UC14
+Administrador --> UC9
+Administrador --> UC10
+Administrador --> UC11
+@enduml

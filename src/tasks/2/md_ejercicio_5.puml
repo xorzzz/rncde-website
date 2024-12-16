@@ -1,0 +1,70 @@
+@startuml md_ejercicio_5
+
+class Usuario {
+    - id : int
+    - nombre : String
+    - email : String
+    - rol : String
+    - historialPedidos : List<Pedido>
+}
+
+class Producto {
+    - id : int
+    - nombre : String
+    - descripcion : String
+    - precio : float
+    - disponible : Boolean
+}
+
+class Menu {
+    - id : int
+    - productos : List<Producto>
+}
+
+class Pedido {
+    - id : int
+    - clienteId : int
+    - productos : List<Producto>
+    - total : float
+    - estado : String
+    - propina : float
+    - fecha : Date
+    - detallesPersonalizacion : List<DetallePersonalizacion>
+}
+
+class DetallePersonalizacion {
+    - id : int
+    - productoId : int
+    - opciones : String
+}
+
+class Pago {
+    - id : int
+    - pedidoId : int
+    - metodo : String
+    - total : float
+    - fecha : Date
+    - estado : String
+}
+
+class Inventario {
+    - id : int
+    - productoId : int
+    - cantidad : int
+}
+
+class Reporte {
+    - id : int
+    - tipo : String
+    - fechaGeneracion : Date
+    - contenido : String
+}
+
+Usuario "1" --> "*" Pedido
+Pedido "1" --> "*" Producto
+Pedido "1" --> "*" DetallePersonalizacion
+Pedido "1" --> "1" Pago
+Producto "1" --> "1" Inventario
+Administrador "1" --> "*" Reporte
+Menu "1" --> "*" Producto
+@enduml

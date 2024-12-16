@@ -73,7 +73,7 @@ const valueRoutes = ref({
 })
 
 const detectScreen = () => {
-  if (window.innerWidth < 620) {
+  if (window.innerWidth < 964) {
     dropmenu.value = false
   } else {
     dropmenu.value = true
@@ -456,7 +456,7 @@ m588 -611 c88 -14 159 -53 187 -104 42 -78 54 -179 60 -495 6 -315 -6 -536
           class="mdi mdi-menu"
           style="font-size: 24px"
           :style="
-            startColor === 'light' && isStart ? { color: colors.white } : { color: colors.blue }
+            startColor === 'light' && isStart ? { color: colors.white } : { color: colors.black }
           "
         ></span>
       </div>
@@ -495,7 +495,7 @@ m588 -611 c88 -14 159 -53 187 -104 42 -78 54 -179 60 -495 6 -315 -6 -536
 
           <div>
             <RouterLink to="/contact">
-              <ButtonSolid primaryColor="bg-sky">
+              <ButtonSolid primaryColor="sky" text-color="blue">
                 Contáctanos
                 <i class="fi fi-rr-arrow-small-right"></i>
               </ButtonSolid>

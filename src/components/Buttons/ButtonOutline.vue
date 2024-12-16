@@ -7,22 +7,20 @@ import '@/assets/variables.css'
 const props = defineProps({
   primaryColor: {
     type: String,
-    default: 'bg-blue'
+    default: 'blue',
+    enum: ['blue', 'sky', 'white', 'black']
   },
   textColor: {
     type: String,
-    default: 'text-blue'
-  },
-  iconPosition: {
-    type: String,
-    default: 'right'
+    default: 'blue',
+    enum: ['blue', 'sky', 'white', 'black']
   }
 })
 </script>
 
 <template>
   <button
-    :class="['outline-' + primaryColor, 'outline-' + textColor, iconPosition]"
+    :class="['outline-bg-' + primaryColor, 'outline-text-' + textColor]"
     class="outline-button-s"
   >
     <slot />
@@ -32,10 +30,11 @@ const props = defineProps({
 <style lang="scss">
 @import '@/assets/styles/variables.scss';
 
+//BUTTON STYLE
 .outline-button-s {
   height: 48px;
   padding: 0 30px;
-  border-radius: 100px;
+  border-radius: 6px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -55,39 +54,42 @@ const props = defineProps({
     align-items: center;
   }
 }
-
 .outline-button-s:hover {
   cursor: pointer;
   column-gap: 16px;
 }
-
 .outline-button-s:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
+}
+
+//BACKGROUND STYLE
+.outline-bg-blue {
+  border: 2px solid $rc-blue;
 }
 
 .outline-bg-sky {
   border: 2px solid $rc-sky;
-  color: $rc-blue;
 }
 
-.outline-bg-blue {
-  border: 2px solid $rc-blue;
-  color: $rc-blue;
+.outline-bg-white {
+  border: 2px solid $rc-white-2;
 }
 
-.outline-left {
-  flex-direction: row-reverse;
+.outline-bg-black {
+  border: 2px solid $rc-black-2;
 }
 
-.outline-right {
-  flex-direction: row;
-}
-
+//TEXT STYLE
 .outline-text-blue {
   color: $rc-blue;
 }
-
 .outline-text-sky {
   color: $rc-sky;
+}
+.outline-text-white {
+  color: $rc-white;
+}
+.outline-text-black {
+  color: $rc-black-2;
 }
 </style>

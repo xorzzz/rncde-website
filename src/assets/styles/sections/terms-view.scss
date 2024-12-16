@@ -1,0 +1,59 @@
+@import '@/assets/styles/variables.scss';
+
+.terms-main {
+  .land-section {
+    background-image: linear-gradient(45deg, $rc-blue-5, $rc-blue-1);
+
+    .content {
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+    }
+    border-radius: 0 0 8px 8px;
+  }
+
+  .terms-section {
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      gap: 40px;
+      max-width: 900px;
+      .term {
+        display: flex;
+        gap: 20px;
+        .number {
+          color: $rc-black-2;
+        }
+        .content-term {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .title {
+            color: $rc-black-2;
+          }
+          .description {
+          }
+          .sub-term {
+            display: flex;
+            gap: 20px;
+            strong {
+              font-weight: bold;
+            }
+            .number {
+            }
+            .description {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+}

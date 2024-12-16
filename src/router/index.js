@@ -35,7 +35,17 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue')
     },
     {
-      path: '/:pathMatch(.*)*', // pathMatch captura cualquier ruta no definida
+      path: '/privacity',
+      name: 'privacity',
+      component: () => import('../views/PolicesView.vue')
+    },
+    {
+      path: '/terms',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
       name: 'notFound',
       component: () => import('../views/NotFoundView.vue')
     }

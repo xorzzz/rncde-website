@@ -1,0 +1,32 @@
+@startuml cd_ejercicio_1
+actor Empleado
+actor Administrador
+
+rectangle Sistema {
+    usecase "Registrar productos en el inventario" as UC1
+    usecase "Ajustar inventario (daños/pérdidas)" as UC2
+    usecase "Generar alertas de bajo stock" as UC3
+    usecase "Generar órdenes de compra" as UC4
+    usecase "Realizar seguimiento de productos en tránsito" as UC5
+    usecase "Configurar niveles de stock mínimos" as UC6
+    usecase "Gestionar proveedores" as UC7
+    usecase "Generar reportes financieros" as UC8
+    usecase "Definir roles de empleados" as UC9
+    usecase "Búsqueda avanzada de productos" as UC10
+    usecase "Imprimir etiquetas con códigos de barras" as UC11
+    usecase "Generar reportes periódicos" as UC12
+}
+
+Empleado --> UC1
+Empleado --> UC2
+Empleado --> UC3
+Empleado --> UC4
+Empleado --> UC5
+Empleado --> UC10
+Empleado --> UC11
+Administrador --> UC6
+Administrador --> UC7
+Administrador --> UC8
+Administrador --> UC9
+Administrador --> UC12
+@enduml

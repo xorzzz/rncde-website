@@ -7,17 +7,19 @@ import '@/assets/variables.css'
 const props = defineProps({
   primaryColor: {
     type: String,
-    default: 'bg-blue'
+    enum: ['blue', 'sky', 'white', 'black'],
+    default: 'blue'
   },
-  iconPosition: {
+  textColor: {
     type: String,
-    default: 'right'
+    enum: ['blue', 'sky', 'white', 'black'],
+    default: 'white'
   }
 })
 </script>
 
 <template>
-  <button :class="['solid-' + primaryColor, 'solid-' + iconPosition]" class="solid-button-s">
+  <button :class="['solid-bg-' + primaryColor, 'solid-text-' + textColor]" class="solid-button-s">
     <slot />
   </button>
 </template>
@@ -25,10 +27,11 @@ const props = defineProps({
 <style lang="scss">
 @import '@/assets/styles/variables.scss';
 
+//BUTTON STYLE
 .solid-button-s {
   height: 48px;
   padding: 0 30px;
-  border-radius: 12px;
+  border-radius: 6px;
   border: none;
   outline: none;
 
@@ -47,31 +50,42 @@ const props = defineProps({
     align-items: center;
   }
 }
-
 .solid-button-s:hover {
   cursor: pointer;
   column-gap: 16px;
 }
-
 .solid-button-s:active {
   transform: scale(0.95);
 }
 
-.solid-bg-sky {
-  background-image: linear-gradient(135deg, $rc-sky-1, $rc-sky-3);
-  color: white;
-}
-
+//BACKGROUND STYLE
 .solid-bg-blue {
-  background-image: linear-gradient(135deg, $rc-blue-1, $rc-blue);
-  color: white;
+  background-image: linear-gradient(270deg, $rc-blue-2, $rc-blue-3);
 }
 
-.solid-left {
-  flex-direction: row-reverse;
+.solid-bg-sky {
+  background-image: linear-gradient(270deg, $rc-sky-2, $rc-sky-3);
 }
 
-.solid-right {
-  flex-direction: row;
+.solid-bg-white {
+  border: 2px solid $rc-white-2;
+}
+
+.solid-bg-black {
+  border: 2px solid $rc-black-2;
+}
+
+//TEXT STYLE
+.solid-text-blue {
+  color: $rc-blue;
+}
+.solid-text-sky {
+  color: $rc-sky;
+}
+.solid-text-white {
+  color: $rc-white;
+}
+.solid-text-black {
+  color: $rc-black-2;
 }
 </style>

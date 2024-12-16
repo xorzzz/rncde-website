@@ -24,7 +24,6 @@
       justify-content: start;
       gap: 10px;
       width: 100%;
-
       .icon {
         display: none;
       }
@@ -275,14 +274,22 @@
       padding: 0 10%;
 
       .logo {
+        width: fit-content;
         .icon {
           display: block;
+          transition: all ease-in-out 0.3s;
         }
         a {
           .a {
           }
           .b {
           }
+        }
+      }
+
+      .logo:hover {
+        .icon {
+          margin-right: 6px;
         }
       }
 
@@ -307,7 +314,7 @@
       }
 
       .dropmenu {
-        display: none;
+        // display: none;
       }
     }
 

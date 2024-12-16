@@ -1,0 +1,69 @@
+@startuml md_ejercicio_3
+
+class Usuario {
+    - id : int
+    - nombre : String
+    - email : String
+    - rol : String
+    - historialPrestamos : List<Prestamo>
+}
+
+class Libro {
+    - id : int
+    - titulo : String
+    - autor : String
+    - tema : String
+    - palabrasClave : List<String>
+    - disponibilidad : String
+    - esElectronico : Boolean
+    - reseñas : List<Reseña>
+}
+
+class Prestamo {
+    - id : int
+    - libroId : int
+    - usuarioId : int
+    - fechaPrestamo : Date
+    - fechaDevolucion : Date
+    - estado : String
+}
+
+class Reserva {
+    - id : int
+    - libroId : int
+    - usuarioId : int
+    - fechaReserva : Date
+    - estado : String
+}
+
+class Reseña {
+    - id : int
+    - libroId : int
+    - usuarioId : int
+    - calificacion : int
+    - comentario : String
+}
+
+class Politica {
+    - id : int
+    - diasPrestamo : int
+    - multaPorDia : float
+    - maxLibrosReservados : int
+}
+
+class Estadistica {
+    - id : int
+    - periodo : String
+    - librosPrestados : int
+    - librosMasSolicitados : List<Libro>
+    - usuariosActivos : List<Usuario>
+}
+
+Usuario "1" --> "*" Prestamo
+Usuario "1" --> "*" Reserva
+Libro "1" --> "*" Reseña
+Prestamo "1" --> "1" Libro
+Reserva "1" --> "1" Libro
+Politica "1" --> "1" Sistema
+Sistema "1" --> "*" Estadistica
+@enduml

@@ -24,11 +24,12 @@ $rc-black-2: #3e3e3e;
 $rc-gray: #4d4d4d;
 $rc-gray-1: #6f6f6f;
 $rc-gray-2: #828282;
+//------------------
 
-//$rc-blue-5: #3331b7;
-
+//TITLE STYLE
 .rc-title {
   font-family: 'Inter', sans-serif;
+  color: $rc-black-2;
   font-weight: 900;
   font-size: 36px;
 }
@@ -39,46 +40,101 @@ $rc-gray-2: #828282;
   font-size: 48px;
   color: $rc-blue;
 }
+//------------------
 
+//SUBTITLE STYLES
 .rc-subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 26px;
   color: $rc-blue;
 }
 
+.rc-subtitle-2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: $rc-black-1;
+}
+
+//TEXT STYLES
 .rc-text {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: $rc-black;
-
   //line-height:1.75rem
 }
 
 .rc-text-light {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 200;
+  font-size: 16px;
   color: $rc-black;
 }
+//------------------
 
 .text-white {
-  color: $rc-white;
+  color: $rc-white !important;
 }
-
 .text-sky {
-  color: $rc-sky;
-  font-weight: bold;
+  color: $rc-sky !important ;
+}
+.text-blue {
+  color: $rc-blue !important;
+}
+.text-black {
+  color: $rc-black !important ;
+}
+.text-gray {
+  color: $rc-gray !important ;
 }
 
 @media (min-width: 480px) {
+  //TITLE STYLE
   .rc-title {
     font-family: 'Inter', sans-serif;
     font-weight: bolder;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 900;
     color: $rc-blue;
+  }
+
+  .rc-title-land {
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    color: $rc-blue;
+  }
+  //------------------
+
+  //SUBTITLE STYLE
+  .rc-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: $rc-blue;
+  }
+
+  //TEXT STYLES
+  .rc-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $rc-black;
+    //line-height:1.75rem
+  }
+
+  .rc-text-light {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: $rc-black;
+  }
+  //------------------
+
+  .text-white {
+    color: $rc-white;
   }
 }
 
@@ -101,4 +157,61 @@ $rc-gray-2: #828282;
 .aling-y {
   display: flex;
   align-items: center;
+}
+
+// DISPOSICIÓN DE ELEMENTOS
+.section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .row-container {
+    width: calc(100% - 60px);
+    max-width: 1600px;
+    .side-container {
+    }
+  }
+}
+
+/*
+@media (min-width: 720px) {
+  .section-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .row-container {
+      width: calc(80%);
+      max-width: 1500px;
+      .side-container {
+      }
+    }
+  }
+}
+
+*/
+.rc-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $rc-gray;
+  //color: red;
+
+  justify-content: left;
+  margin-top: 1rem;
+}
+
+.rc-text-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: $rc-gray;
+  //color: red;
+
+  justify-content: left;
+  margin-top: 1rem;
 }

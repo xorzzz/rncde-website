@@ -1,7 +1,9 @@
 <script setup>
 //import { onMounted, ref } from 'vue'
-import ButtonSolid from '@/components/ButtonSolid.vue'
-import ButtonOutline from '@/components/ButtonOutline.vue'
+import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
+import ButtonOutline from '@/components/Buttons/ButtonOutline.vue'
+import WhyUsComponent from '@/components/Utils/WhyUsComponent.vue'
+import SectionRC from '@/components/Utils/SectionRC.vue'
 import { ref, onMounted } from 'vue'
 import '@/assets/styles/variables.scss'
 
@@ -88,7 +90,7 @@ const scrollLeft = () => {
 <template>
   <div class="main-hwd">
     <div class="bg-blue">
-      <div class="land-container">
+      <SectionRC class="land-container">
         <div class="top-info-mb" id="original">
           <div class="title rc-title">¿COMO LO HACEMOS ?</div>
           <div class="separator"></div>
@@ -97,37 +99,83 @@ const scrollLeft = () => {
           <div class="cards-container" id="container" dir="ltr">
             <div class="card">
               <div class="img-container">
-                <img src="@/assets/images/how/img1.png" alt="" />
+                <img src="@/assets/images/how/step-1.png" alt="" />
               </div>
               <div class="rb-container">
                 <div class="title">1. Análisis de Requerimientos</div>
                 <div class="description">
-                  Entendemos que su empresa es única. Definimos sus necesidades para ofrecer
-                  soluciones alineadas con su esencia.
+                  Realizamos un análisis detallado y personalizado, identificando cada aspecto clave
+                  de su negocio y los procesos involucrados. Esto nos permite diseñar estrategias
+                  precisas que respondan a sus desafíos específicos y garantizar que las soluciones
+                  propuestas se integren de manera efectiva con sus operaciones actuales.
                 </div>
               </div>
             </div>
             <div class="card">
               <div class="img-container">
-                <img src="@/assets/images/how/img1.png" alt="" />
+                <img src="@/assets/images/how/step-2.png" alt="" />
               </div>
               <div class="rb-container">
-                <div class="title">1. Análisis de Requerimientos</div>
+                <div class="title">2. Diseño y Arquitectura de la Solución</div>
                 <div class="description">
-                  Entendemos que su empresa es única. Definimos sus necesidades para ofrecer
-                  soluciones alineadas con su esencia.
+                  Definimos la estructura y los componentes clave de la solución, asegurando que sea
+                  funcional, escalable y eficiente. Cada diseño está cuidadosamente planeado para
+                  integrar las mejores prácticas tecnológicas y adaptarse perfectamente a las
+                  necesidades del cliente.
                 </div>
               </div>
             </div>
             <div class="card">
               <div class="img-container">
-                <img src="@/assets/images/how/img1.png" alt="" />
+                <img src="@/assets/images/how/step-3.png" alt="" />
               </div>
               <div class="rb-container">
-                <div class="title">1. Análisis de Requerimientos</div>
+                <div class="title">3. Desarrollo y Codificación</div>
                 <div class="description">
-                  Entendemos que su empresa es única. Definimos sus necesidades para ofrecer
-                  soluciones alineadas con su esencia.
+                  Implementamos cada solución con un enfoque riguroso en la calidad del código,
+                  priorizando la eficiencia, la seguridad y la escalabilidad. Nuestro equipo combina
+                  experiencia y las últimas tecnologías para garantizar resultados robustos que se
+                  alineen con los objetivos del cliente.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img-container">
+                <img src="@/assets/images/how/step-4.png" alt="" />
+              </div>
+              <div class="rb-container">
+                <div class="title">4. PRUEBAS DE CALIDAD</div>
+                <div class="description">
+                  Aplicamos metodologías de prueba exhaustivas para identificar y corregir cualquier
+                  posible inconveniente. Nuestro enfoque asegura que cada solución cumpla con los
+                  más altos estándares de calidad, brindando confianza y estabilidad en su
+                  implementación final.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img-container">
+                <img src="@/assets/images/how/step-5.png" alt="" />
+              </div>
+              <div class="rb-container">
+                <div class="title">5. Despliegue e implementación</div>
+                <div class="description">
+                  Coordinamos cada etapa del despliegue para asegurar que la solución esté operativa
+                  en el momento adecuado. Nuestro enfoque minimiza interrupciones, maximizando la
+                  eficiencia y garantizando que todo funcione de forma óptima desde el primer día
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img-container">
+                <img src="@/assets/images/how/step-6.png" alt="" />
+              </div>
+              <div class="rb-container">
+                <div class="title">6. Mantenimiento y soporte</div>
+                <div class="description">
+                  Monitoreamos constantemente el rendimiento de la solución, solucionando cualquier
+                  inconveniente de forma proactiva. Nuestro equipo está disponible para realizar
+                  mejoras y ajustes, garantizando que la tecnología evolucione junto con tu negocio.
                 </div>
               </div>
             </div>
@@ -147,7 +195,7 @@ const scrollLeft = () => {
                 fin de convertirnos en aliados estratégicos en sus procesos de negocio.
               </div>
               <div class="button-container" style="transition: all ease-in-out 1s">
-                <ButtonOutline @click="scrollLeft">
+                <ButtonOutline @click="scrollLeft" primary-color="sky">
                   <svg
                     width="8"
                     height="14"
@@ -164,8 +212,8 @@ const scrollLeft = () => {
                   </svg>
                 </ButtonOutline>
                 <ButtonSolid
-                  primary-color="#27DCE8"
-                  secondary-color="#020065 "
+                  primary-color="sky"
+                  text-color="blue"
                   @click="scrollRight"
                   :disabled="isEndReached"
                   >Siguiente</ButtonSolid
@@ -174,8 +222,9 @@ const scrollLeft = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div class="idea-container">
+      </SectionRC>
+
+      <SectionRC class="idea-container">
         <div class="info-container">
           <div class="img-container">
             <img src="@/assets/images/how/idea.png" alt="" />
@@ -187,9 +236,9 @@ const scrollLeft = () => {
             vero sit magni adipisci facilis iure voluptatum optio.
           </div>
           <div class="button-container">
-            <ButtonSolid primary-color="#27DCE8" secondary-color="#020065 "
-              >Contáctanos</ButtonSolid
-            >
+            <RouterLink to="/contact" class="no-deco">
+              <ButtonSolid primary-color="sky" text-color="blue">Contáctanos</ButtonSolid>
+            </RouterLink>
           </div>
         </div>
 
@@ -287,7 +336,7 @@ const scrollLeft = () => {
             </div>
           </div>
         </div>
-      </div>
+      </SectionRC>
     </div>
     <div class="bg-wt">
       <div class="top-section">
@@ -299,23 +348,7 @@ const scrollLeft = () => {
           <div class="corner-right"></div>
         </div>
       </div>
-      <div class="why-section">
-        <div class="img-container">
-          <img src="@\assets\images\home\why-runcode-mb.png" alt="" />
-        </div>
-
-        <div class="container">
-          <div class="description">
-            La eficiencia y la eficacia de nuestras soluciones, son producto de nuestro compromiso
-            con valores sólidos corporativos y con cada objetivo de nuestros clientes.
-          </div>
-          <div class="button-container">
-            <RouterLink to="whyRuncode">
-              <ButtonSolid :primary-color="rcBlue" :secondary-color="rcWhite">Ver más</ButtonSolid>
-            </RouterLink>
-          </div>
-        </div>
-      </div>
+      <WhyUsComponent />
     </div>
   </div>
 </template>

@@ -1,0 +1,75 @@
+@startuml ejercicio_1
+
+class Transporte {
+    +tipo: String
+}
+
+class TransporteTerrestre {
+    +descripcion: String
+}
+
+class TransporteAereo {
+    +descripcion: String
+}
+
+class TransporteMaritimo {
+    +descripcion: String
+}
+
+class Automovil {
+    +ruedas: int
+    +motor: String
+}
+
+class Tren {
+    +viasFerreas: Boolean
+}
+
+class Avion {
+    +alas: Boolean
+    +motor: String
+}
+
+class Helicoptero {
+    +despegueVertical: Boolean
+    +motor: String
+}
+
+class Barco {
+    +motor: String
+    +timon: Boolean
+    +cabinas: int
+}
+
+class Submarino {
+    +sumergible: Boolean
+    +proposito: String
+}
+
+class Persona {
+    +nombre: String
+    +tipo: String  // pasajero o tripulación
+}
+
+class Mercancia {
+    +descripcion: String
+    +peso: Float
+    +destino: String
+}
+
+Transporte "1" --> "1..*" TransporteTerrestre : incluye
+Transporte "1" --> "1..*" TransporteAereo : incluye
+Transporte "1" --> "1..*" TransporteMaritimo : incluye
+
+TransporteTerrestre "1" --> "0..*" Automovil : tiene
+TransporteTerrestre "1" --> "0..*" Tren : tiene
+
+TransporteAereo "1" --> "0..*" Avion : tiene
+TransporteAereo "1" --> "0..*" Helicoptero : tiene
+
+TransporteMaritimo "1" --> "0..*" Barco : tiene
+TransporteMaritimo "1" --> "0..*" Submarino : tiene
+
+Persona "0..*" --> "1..*" Transporte : usa
+Mercancia "0..*" --> "1..*" Transporte : transportada en
+@enduml

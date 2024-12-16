@@ -1,0 +1,58 @@
+@startuml ejercicio_2
+
+class InstrumentoMusical {
+    +categoria: String
+    +sonido: String
+}
+
+class InstrumentoCuerda {
+    +tipoCuerda: String
+}
+
+class Guitarra {
+    +cuerda: String // acero o nylon
+}
+
+class Violin {
+    +arco: Boolean
+}
+
+class InstrumentoViento {
+    +tipo: String // madera o metal
+}
+
+class Flauta {
+    +boquilla: Boolean
+}
+
+class Trompeta {
+    +boquilla: Boolean
+}
+
+class InstrumentoPercusion {
+    +tipoMaterial: String
+}
+
+class Tambor {
+    +parche: String
+    +baquetas: Boolean
+}
+
+class Bateria {
+    +tambores: int
+    +platillos: int
+}
+
+InstrumentoMusical "1" --> "1..*" InstrumentoCuerda : incluye
+InstrumentoMusical "1" --> "1..*" InstrumentoViento : incluye
+InstrumentoMusical "1" --> "1..*" InstrumentoPercusion : incluye
+
+InstrumentoCuerda "1" --> "0..*" Guitarra : incluye
+InstrumentoCuerda "1" --> "0..*" Violin : incluye
+
+InstrumentoViento "1" --> "0..*" Flauta : incluye
+InstrumentoViento "1" --> "0..*" Trompeta : incluye
+
+InstrumentoPercusion "1" --> "0..*" Tambor : incluye
+InstrumentoPercusion "1" --> "0..*" Bateria : incluye
+@enduml

@@ -2,6 +2,9 @@
 //import ButtonItem from '@/components/ButtonItem.vue'
 //import ButtonSkyItem from '@/components/ButtonSkyItem.vue'
 import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
+import SectionRC from '@/components/Utils/SectionRC.vue'
+import WhyUsComponent from '@/components/Utils/WhyUsComponent.vue'
+
 import { onMounted, ref } from 'vue'
 const heightLeft = ref(null)
 const heightRight = ref(null)
@@ -42,36 +45,42 @@ const updateHeight = () => {
 <template>
   <div class="main-about">
     <!--LAND-->
-    <div class="land-section">
+    <SectionRC class="land-section">
       <div class="info-container">
         <h1 class="rc-title title-land">SOBRE NOSOTROS</h1>
         <p class="description">
-          Somos una compañía colombiana dedicada al desarrollo de software, fundada en 2015. Nuestro
-          principal objetivo es ofrecer soluciones inteligentes y personalizadas, adaptadas a las
-          necesidades de nuestros clientes.
+          Somos una compañía colombiana con más de <strong>9 años de experiencia</strong> en el
+          desarrollo de software, creada con el propósito de brindar soluciones innovadoras a
+          empresas de diferentes sectores. A lo largo de los años, hemos logrado consolidarnos como
+          un aliado estratégico para nuestros clientes, ofreciendo productos y servicios que se
+          ajustan a sus necesidades específicas y les permiten optimizar sus procesos. Nuestro
+          enfoque se basa en la personalización, la calidad y la excelencia, buscando siempre el
+          mejor aprovechamiento de las tecnologías disponibles.
         </p>
       </div>
       <div class="img-container">
         <img src="@/assets/images/about/land-about.gif" alt="land-about" />
       </div>
-    </div>
+    </SectionRC>
 
     <!--MISION-->
+
     <div class="mision-section">
-      <div class="info-container">
-        <h2 class="title">NUESTRA MISIÓN</h2>
+      <SectionRC class="info-container">
+        <h2 class="title rc-subtitle">NUESTRA MISIÓN</h2>
         <p class="paragraph rc-text">
-          "Queremos acompañar a su empresa en el proceso de transformación digital, el mundo avanza
-          y las estrategias tecnológicas, son la mejor opción para actuar a la velocidad de los
-          cambios"
+          Liderar la transformación digital de las empresas desarrollando soluciones a la medida que
+          combinan innovación, calidad y adaptabilidad para enfrentar los retos del futuro,
+          ayudándolas a optimizar sus operaciones, mejorar la experiencia del cliente y alcanzar sus
+          objetivos de negocio en la era digital.
         </p>
-      </div>
+      </SectionRC>
     </div>
 
     <!--WE ARE-->
-    <div class="we-section">
-      <h2 class="title rc-title">SOMOS</h2>
 
+    <SectionRC class="we-section">
+      <h2 class="title rc-subtitle">SOMOS</h2>
       <div class="container">
         <div class="cards-container">
           <!--ITEM LEFT SIDE-->
@@ -143,31 +152,37 @@ const updateHeight = () => {
           </div>
         </div>
       </div>
-    </div>
+    </SectionRC>
 
     <!--CUSTOMERS-->
     <div class="customers-section">
-      <div class="title rc-title">CLIENTES</div>
-      <div class="brands">
-        <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
-        <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
-        <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
-        <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
-      </div>
+      <SectionRC class="content">
+        <div class="title rc-subtitle">CLIENTES</div>
+        <div class="brands">
+          <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
+          <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
+          <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
+          <div class="icon"><img src="@/assets/images/about/brand-1.png" alt="" /></div>
+        </div>
+      </SectionRC>
     </div>
 
     <!--VALUES-->
-    <div class="values-section">
-      <div class="title rc-title">NUESTROS VALORES</div>
+    <SectionRC class="values-section">
+      <div class="title rc-subtitle">NUESTROS VALORES</div>
       <div class="cards-container">
         <div class="card">
           <div class="description">
-            Transformamos sus ideas en realidad, creando un código robusto y personalizado que se
-            adapta perfectamente a sus operaciones. creamos productos y servicios adaptables a sus
-            operaciones.
+            <span class="mdi mdi-format-quote-open"></span>Nos impulsa una profunda motivación por
+            la creación de soluciones que no solo satisfagan las necesidades de nuestros clientes,
+            sino que las excedan ampliamente. Esta motivación se manifiesta en un compromiso
+            inquebrantable con la calidad, la precisión y la creatividad, valores que consideramos
+            pilares fundamentales en cada etapa de nuestros desarrollos<span
+              class="mdi mdi-format-quote-close"
+            ></span>
           </div>
           <div class="content">
-            <div class="title">SIMPLICIDAD</div>
+            <div class="title">EXCELENCIA CONSTANTE</div>
             <div class="img-container">
               <img src="@/assets/images/about/value-1.png" alt="" />
             </div>
@@ -175,12 +190,17 @@ const updateHeight = () => {
         </div>
         <div class="card">
           <div class="description">
-            Transformamos sus ideas en realidad, creando un código robusto y personalizado que se
-            adapta perfectamente a sus operaciones. creamos productos y servicios adaptables a sus
-            operaciones.
+            <span class="mdi mdi-format-quote-open"></span>Nos comprometemos a mantenernos
+            constantemente a la vanguardia de las tendencias tecnológicas y del mercado, lo que nos
+            permite ofrecer soluciones innovadoras y adaptables que evolucionan al mismo ritmo que
+            las necesidades de nuestros clientes. Esta dedicación a la vanguardia se traduce en una
+            búsqueda continua de conocimiento, experimentación con nuevas tecnologías y una profunda
+            comprensión del cambiante panorama empresarial<span
+              class="mdi mdi-format-quote-close"
+            ></span>
           </div>
           <div class="content">
-            <div class="title">SIMPLICIDAD</div>
+            <div class="title">ADAPTABILIDAD TECNOLÓGICA</div>
             <div class="img-container">
               <img src="@/assets/images/about/value-2.png" alt="" />
             </div>
@@ -188,63 +208,65 @@ const updateHeight = () => {
         </div>
         <div class="card">
           <div class="description">
-            Transformamos sus ideas en realidad, creando un código robusto y personalizado que se
-            adapta perfectamente a sus operaciones. creamos productos y servicios adaptables a sus
-            operaciones.
+            <span class="mdi mdi-format-quote-open"></span>Construimos alianzas sólidas y duraderas
+            con nuestros clientes, cimentadas en la confianza mutua, la comunicación abierta y un
+            genuino espíritu de colaboración. No nos limitamos a ser proveedores externos, sino que
+            nos convertimos en una extensión de su propio equipo, trabajando codo a codo para
+            convertir sus ideas y visiones en realidades innovadoras que generen un impacto
+            tangible<span class="mdi mdi-format-quote-close"></span>
           </div>
           <div class="content">
-            <div class="title">SIMPLICIDAD</div>
+            <div class="title">COLABORACIÓN ESTRATÉGICA</div>
             <div class="img-container">
               <img src="@/assets/images/about/value-3.png" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </SectionRC>
 
     <!--OUR TEAM-->
-    <div class="team-section">
+    <SectionRC class="team-section">
       <div class="content-container">
-        <h2 class="rc-title">CONÓCE NUESTRO EQUIPO</h2>
+        <h2 class="rc-subtitle text-white">
+          CONÓCE NUESTRO <span class="rc-subtitle text-sky">EQUIPO</span>
+        </h2>
         <p class="paragraph">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur magni sed repellendus
-          dolores. Hic, ipsum.
+          En RunCode contamos con un equipo altamente capacitado, un verdadero motor de innovación
+          compuesto por profesionales apasionados por la tecnología. Este equipo no solo posee una
+          sólida formación y experiencia en sus respectivas áreas, sino que también comparte una
+          profunda vocación por la búsqueda de soluciones creativas y de vanguardia.
         </p>
+        <p>
+          Nuestro talento humano combina experticia técnica con una mentalidad abierta y un enfoque
+          colaborativo, entendiendo que la verdadera innovación surge del intercambio de ideas y la
+          sinergia entre diferentes perspectivas.
+        </p>
+
+        <P>
+          Trabajamos unidos, con dedicación y compromiso inquebrantables, impulsados por la
+          convicción de que la excelencia se logra a través del esfuerzo conjunto y la atención al
+          detalle. Para nosotros, cada proyecto es una oportunidad para demostrar nuestra pasión por
+          la tecnología y nuestro compromiso con la calidad. Nos esforzamos para que cada desarrollo
+          no solo cumpla con los requisitos planteados, sino que los supere con creces, ofreciendo
+          un valor añadido que marque la diferencia.
+        </P>
         <div>
           <div>cuadros</div>
           <div>cuadros</div>
           <div>cuadros</div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eveniet sapiente nesciunt
-          iusto ipsum illum ea esse quaerat, fugit voluptate illo non libero deserunt, quas
-          doloremque saepe dolorem delectus soluta. Ea, atque eaque tempore consequuntur voluptatum
-          optio omnis. Culpa a, placeat ad quas praesentium nam fuga deserunt incidunt debitis
-          architecto!
-        </p>
 
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, nesciunt! Fuga ut
-          fugiat optio explicabo delectus distinctio quam inventore magnam.
-        </p>
         <div class="aling-y">
           <RouterLink to="/contact" class="no-deco">
-            <ButtonSolid primaryColor="bg-blue">
+            <ButtonSolid primaryColor="sky">
               Contáctanos
               <i class="fi fi-rr-arrow-small-right"></i>
             </ButtonSolid>
           </RouterLink>
         </div>
       </div>
-      <!--Leader cards container-->
 
-      <!--TAREAS CARD MOBILE
-      +imagen cuadrada, establecer su radio aspecto
-      +establecer maximo
-      -separar todo a 20px gap
-      -establecer tamaño de los titulos     
-      
-      -->
       <div class="cards-container">
         <div class="card">
           <div class="top-side">
@@ -271,8 +293,8 @@ const updateHeight = () => {
               <img src="@/assets/images/about/leader-pic-2.png" alt="" />
             </div>
             <Teleport :to="mobile ? '#title-mb' + '-2' : '#title-md' + '-2'" v-if="isMounted">
-              <div class="title">Carlos</div>
-              <div class="position">Secretario General de Asuntos sin Importancia</div>
+              <div class="title">Chris Owwen</div>
+              <div class="position">Director de desarrollo</div>
             </Teleport>
             <div class="info-container" id="title-mb-2"></div>
           </div>
@@ -290,8 +312,8 @@ const updateHeight = () => {
               <img src="@/assets/images/about/leader-pic-3.png" alt="" />
             </div>
             <Teleport :to="mobile ? '#title-mb' + '-3' : '#title-md' + '-3'" v-if="isMounted">
-              <div class="title">Carlos</div>
-              <div class="position">Secretario General de Asuntos sin Importancia</div>
+              <div class="title">Bryan Owwen</div>
+              <div class="position"></div>
             </Teleport>
             <div class="info-container" id="title-mb-3"></div>
           </div>
@@ -304,7 +326,11 @@ const updateHeight = () => {
           </div>
         </div>
       </div>
-    </div>
+    </SectionRC>
+
+    <SectionRC>
+      <WhyUsComponent />
+    </SectionRC>
   </div>
 </template>
 

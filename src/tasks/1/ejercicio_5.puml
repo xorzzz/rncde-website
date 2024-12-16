@@ -1,0 +1,37 @@
+@startuml ejercicio_5
+
+class Vehiculo {
+    +tipo: String
+    +uso: String
+}
+
+class Coche {
+    +motor: String
+    +ruedas: int
+    +chasis: Boolean
+    +volante: Boolean
+    +asientos: int
+    +pedales: Boolean
+}
+
+class Moto {
+    +motor: String
+    +ruedas: int
+    +manillar: Boolean
+    +bateria: Boolean
+    +casco: Boolean
+}
+
+class Bicicleta {
+    +ruedas: int
+    +manillar: Boolean
+    +frenos: Boolean
+    +espejos: Boolean
+    +luces: Boolean
+}
+
+Vehiculo "1" --> "0..*" Coche : incluye
+Vehiculo "1" --> "0..*" Moto : incluye
+Vehiculo "1" --> "0..*" Bicicleta : incluye
+@enduml
+

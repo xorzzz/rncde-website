@@ -1,0 +1,36 @@
+@startuml cu_ejercicio_5
+
+actor Cliente
+actor Camarero
+actor Administrador
+
+rectangle Sistema {
+    usecase "Seleccionar productos del menú" as UC1
+    usecase "Personalizar opciones del pedido" as UC2
+    usecase "Realizar pago seguro" as UC3
+    usecase "Crear cuenta y gestionar perfil" as UC4
+    usecase "Ver historial de pedidos" as UC5
+    usecase "Ver y actualizar pedidos" as UC6
+    usecase "Marcar pedidos como entregados" as UC7
+    usecase "Gestionar propinas" as UC8
+    usecase "Gestionar inventario de productos" as UC9
+    usecase "Actualizar el menú" as UC10
+    usecase "Gestionar cuentas de usuarios" as UC11
+    usecase "Generar reportes de ventas y comportamiento" as UC12
+    usecase "Enviar notificaciones automáticas" as UC13
+}
+
+Cliente --> UC1
+Cliente --> UC2
+Cliente --> UC3
+Cliente --> UC4
+Cliente --> UC5
+Camarero --> UC6
+Camarero --> UC7
+Camarero --> UC8
+Administrador --> UC9
+Administrador --> UC10
+Administrador --> UC11
+Administrador --> UC12
+Sistema --> UC13
+@enduml

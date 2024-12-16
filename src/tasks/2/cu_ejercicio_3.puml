@@ -1,0 +1,38 @@
+@startuml cu_ejercicio_3
+
+actor Estudiante
+actor Bibliotecario
+actor Administrador
+
+rectangle Sistema {
+    usecase "Buscar libros en el catálogo" as UC1
+    usecase "Consultar detalles de libros" as UC2
+    usecase "Reservar libros" as UC3
+    usecase "Acceder a libros electrónicos" as UC4
+    usecase "Ver historial de préstamos" as UC5
+    usecase "Recibir recomendaciones de libros" as UC6
+    usecase "Registrar nuevos libros en el sistema" as UC7
+    usecase "Actualizar detalles de libros" as UC8
+    usecase "Eliminar títulos obsoletos" as UC9
+    usecase "Gestionar reservas y devoluciones" as UC10
+    usecase "Configurar políticas de préstamos y multas" as UC11
+    usecase "Gestionar usuarios y roles" as UC12
+    usecase "Enviar recordatorios y alertas" as UC13
+    usecase "Generar estadísticas de uso de la biblioteca" as UC14
+}
+
+Estudiante --> UC1
+Estudiante --> UC2
+Estudiante --> UC3
+Estudiante --> UC4
+Estudiante --> UC5
+Estudiante --> UC6
+Bibliotecario --> UC7
+Bibliotecario --> UC8
+Bibliotecario --> UC9
+Bibliotecario --> UC10
+Administrador --> UC11
+Administrador --> UC12
+Administrador --> UC14
+Sistema --> UC13
+@enduml
