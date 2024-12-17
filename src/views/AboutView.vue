@@ -48,15 +48,19 @@ const updateHeight = () => {
     <SectionRC class="land-section">
       <div class="info-container">
         <h1 class="rc-title title-land">SOBRE NOSOTROS</h1>
-        <p class="description">
-          Somos una compañía colombiana con más de <strong>9 años de experiencia</strong> en el
-          desarrollo de software, creada con el propósito de brindar soluciones innovadoras a
-          empresas de diferentes sectores. A lo largo de los años, hemos logrado consolidarnos como
-          un aliado estratégico para nuestros clientes, ofreciendo productos y servicios que se
-          ajustan a sus necesidades específicas y les permiten optimizar sus procesos. Nuestro
-          enfoque se basa en la personalización, la calidad y la excelencia, buscando siempre el
-          mejor aprovechamiento de las tecnologías disponibles.
-        </p>
+        <div class="description">
+          <p class="rc-text">
+            Somos una compañía colombiana con más de <strong>9 años de experiencia</strong> en el
+            desarrollo de software, creada con el propósito de brindar soluciones innovadoras a
+            empresas de diferentes sectores.A lo largo de los años, hemos logrado consolidarnos como
+            un aliado estratégico para nuestros clientes, ofreciendo productos y servicios que se
+            ajustan a sus necesidades específicas y les permiten optimizar sus procesos.
+          </p>
+          <p class="rc-text">
+            Nuestro enfoque se basa en la personalización, la calidad y la excelencia, buscando
+            siempre el mejor aprovechamiento de las tecnologías disponibles.
+          </p>
+        </div>
       </div>
       <div class="img-container">
         <img src="@/assets/images/about/land-about.gif" alt="land-about" />
@@ -173,13 +177,16 @@ const updateHeight = () => {
       <div class="cards-container">
         <div class="card">
           <div class="description">
-            <span class="mdi mdi-format-quote-open"></span>Nos impulsa una profunda motivación por
-            la creación de soluciones que no solo satisfagan las necesidades de nuestros clientes,
-            sino que las excedan ampliamente. Esta motivación se manifiesta en un compromiso
-            inquebrantable con la calidad, la precisión y la creatividad, valores que consideramos
-            pilares fundamentales en cada etapa de nuestros desarrollos<span
-              class="mdi mdi-format-quote-close"
-            ></span>
+            <p class="rc-text">
+              <span class="mdi mdi-format-quote-open"></span>
+              Nos impulsa una profunda motivación por la creación de soluciones que no solo
+              satisfagan las necesidades de nuestros clientes, sino que las excedan ampliamente.
+            </p>
+            <p class="rc-text">
+              Esta motivación se manifiesta en un compromiso inquebrantable con la calidad, la
+              precisión y la creatividad, valores que consideramos pilares fundamentales en cada
+              etapa de nuestros desarrollos <span class="mdi mdi-format-quote-close"></span>
+            </p>
           </div>
           <div class="content">
             <div class="title">EXCELENCIA CONSTANTE</div>
@@ -190,14 +197,17 @@ const updateHeight = () => {
         </div>
         <div class="card">
           <div class="description">
-            <span class="mdi mdi-format-quote-open"></span>Nos comprometemos a mantenernos
-            constantemente a la vanguardia de las tendencias tecnológicas y del mercado, lo que nos
-            permite ofrecer soluciones innovadoras y adaptables que evolucionan al mismo ritmo que
-            las necesidades de nuestros clientes. Esta dedicación a la vanguardia se traduce en una
-            búsqueda continua de conocimiento, experimentación con nuevas tecnologías y una profunda
-            comprensión del cambiante panorama empresarial<span
-              class="mdi mdi-format-quote-close"
-            ></span>
+            <p class="rc-text">
+              <span class="mdi mdi-format-quote-open"></span>Nos comprometemos a mantenernos
+              constantemente a la vanguardia de las tendencias tecnológicas y del mercado, lo que
+              nos permite ofrecer soluciones innovadoras y adaptables que evolucionan al mismo ritmo
+              que las necesidades de nuestros clientes.
+            </p>
+            <p class="rc-text">
+              Esta dedicación a la vanguardia se traduce en una búsqueda continua de conocimiento,
+              experimentación con nuevas tecnologías y una profunda comprensión del cambiante
+              panorama empresarial<span class="mdi mdi-format-quote-close"></span>
+            </p>
           </div>
           <div class="content">
             <div class="title">ADAPTABILIDAD TECNOLÓGICA</div>
@@ -208,12 +218,18 @@ const updateHeight = () => {
         </div>
         <div class="card">
           <div class="description">
-            <span class="mdi mdi-format-quote-open"></span>Construimos alianzas sólidas y duraderas
-            con nuestros clientes, cimentadas en la confianza mutua, la comunicación abierta y un
-            genuino espíritu de colaboración. No nos limitamos a ser proveedores externos, sino que
-            nos convertimos en una extensión de su propio equipo, trabajando codo a codo para
-            convertir sus ideas y visiones en realidades innovadoras que generen un impacto
-            tangible<span class="mdi mdi-format-quote-close"></span>
+            <p class="rc-text">
+              <span class="mdi mdi-format-quote-open"></span>Construimos alianzas sólidas y
+              duraderas con nuestros clientes, cimentadas en la confianza mutua, la comunicación
+              abierta y un genuino espíritu de colaboración.
+            </p>
+            <p class="rc-text">
+              No nos limitamos a ser proveedores externos, sino que nos convertimos en una extensión
+              de su propio equipo, trabajando codo a codo para convertir sus ideas y visiones en
+              realidades innovadoras que generen un impacto tangible<span
+                class="mdi mdi-format-quote-close"
+              ></span>
+            </p>
           </div>
           <div class="content">
             <div class="title">COLABORACIÓN ESTRATÉGICA</div>
@@ -231,26 +247,29 @@ const updateHeight = () => {
         <h2 class="rc-subtitle text-white">
           CONÓCE NUESTRO <span class="rc-subtitle text-sky">EQUIPO</span>
         </h2>
-        <p class="paragraph">
-          En RunCode contamos con un equipo altamente capacitado, un verdadero motor de innovación
-          compuesto por profesionales apasionados por la tecnología. Este equipo no solo posee una
-          sólida formación y experiencia en sus respectivas áreas, sino que también comparte una
-          profunda vocación por la búsqueda de soluciones creativas y de vanguardia.
-        </p>
-        <p>
-          Nuestro talento humano combina experticia técnica con una mentalidad abierta y un enfoque
-          colaborativo, entendiendo que la verdadera innovación surge del intercambio de ideas y la
-          sinergia entre diferentes perspectivas.
-        </p>
+        <div class="text-container">
+          <p class="rc-text text-white">
+            En RunCode contamos con un equipo altamente capacitado, un verdadero motor de innovación
+            compuesto por profesionales apasionados por la tecnología. Este equipo no solo posee una
+            sólida formación y experiencia en sus respectivas áreas, sino que también comparte una
+            profunda vocación por la búsqueda de soluciones creativas y de vanguardia.
+          </p>
+          <p class="rc-text text-white">
+            Nuestro talento humano combina experticia técnica con una mentalidad abierta y un
+            enfoque colaborativo, entendiendo que la verdadera innovación surge del intercambio de
+            ideas y la sinergia entre diferentes perspectivas.
+          </p>
 
-        <P>
-          Trabajamos unidos, con dedicación y compromiso inquebrantables, impulsados por la
-          convicción de que la excelencia se logra a través del esfuerzo conjunto y la atención al
-          detalle. Para nosotros, cada proyecto es una oportunidad para demostrar nuestra pasión por
-          la tecnología y nuestro compromiso con la calidad. Nos esforzamos para que cada desarrollo
-          no solo cumpla con los requisitos planteados, sino que los supere con creces, ofreciendo
-          un valor añadido que marque la diferencia.
-        </P>
+          <p class="rc-text text-white">
+            Trabajamos unidos, con dedicación y compromiso inquebrantables, impulsados por la
+            convicción de que la excelencia se logra a través del esfuerzo conjunto y la atención al
+            detalle. Para nosotros, cada proyecto es una oportunidad para demostrar nuestra pasión
+            por la tecnología y nuestro compromiso con la calidad. Nos esforzamos para que cada
+            desarrollo no solo cumpla con los requisitos planteados, sino que los supere con creces,
+            ofreciendo un valor añadido que marque la diferencia.
+          </p>
+        </div>
+
         <div>
           <div>cuadros</div>
           <div>cuadros</div>

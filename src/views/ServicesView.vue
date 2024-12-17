@@ -24,7 +24,7 @@ import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la 
             CONOCE NUESTROS
             <div class="rc-title" style="color: skyblue">SERVICIOS</div>
           </div>
-          <div class="img-container-mb">
+          <div class="img-container-mb" style="background-color: red">
             <img src="@/assets/images/services/land-img.png" alt="land-services" />
           </div>
           <div class="info-container">

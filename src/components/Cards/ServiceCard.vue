@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import ButtonColor from '@/components/Buttons/ButtonColor.vue'
+import RuncodeIcon from '@/components/Utils/RuncodeIcon.vue'
 
 defineProps({
   title: String,
@@ -22,17 +23,17 @@ defineProps({
 const showArticle = ref(false)
 </script>
 <template>
-  <div
-    class="service-card"
-    :style="[{ '--orientation': orientation }]"
-    style="border: 2px solid rgba(198, 198, 198, 0.1); background-color: rgba(245, 250, 254, 0.1)"
-  >
+  <div class="service-card" :style="[{ '--orientation': orientation }]">
     <div
       class="content-container"
       :class="showArticle ? 'hide-content' : ''"
       :style="{ '--text-color': primaryColor }"
     >
-      <div class="top-text" style="color: gray">SERVICIOS RUNCODE</div>
+      <div class="top-info">
+        <RuncodeIcon color="gray" size="20" />
+
+        <div class="top-text" style="color: gray">SERVICIOS RUNCODE</div>
+      </div>
       <slot class="content-card" />
       <div class="button-container">
         <ButtonColor :primaryColor="primaryColor" @click="showArticle = !showArticle">
@@ -58,6 +59,8 @@ const showArticle = ref(false)
   width: 100%;
   border-radius: 20px;
   padding: 20px;
+  border: 2px solid rgba(198, 198, 198, 0.1);
+  background-color: rgba(245, 250, 254, 0.1);
 
   .content-container {
     width: 100%;
@@ -65,10 +68,15 @@ const showArticle = ref(false)
     flex-direction: column;
     justify-content: center;
 
+    .top-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .top-text {
       font-weight: 500;
-      font-size: 10px;
-      margin-bottom: 5px;
+      font-size: 12px;
       color: #61c0ff0d;
     }
 

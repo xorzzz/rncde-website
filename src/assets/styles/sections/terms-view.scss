@@ -56,4 +56,37 @@
 }
 
 @media (min-width: 720px) {
+  .terms-main {
+    .land-section {
+      .content {
+        min-height: 40vh;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .terms-section {
+      padding: 10vh 0;
+      .content {
+        .term {
+          .number {
+          }
+          .content-term {
+            .title {
+            }
+            .description {
+            }
+            .sub-term {
+              strong {
+              }
+              .number {
+              }
+              .description {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

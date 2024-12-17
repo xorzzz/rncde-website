@@ -17,14 +17,13 @@
       flex-direction: column;
       //padding: 0 30px;
       margin-top: 80px;
+      gap: 30px;
 
       .title {
         // estilos para el título
       }
 
       .description {
-        text-align: justify;
-        margin-top: 40px;
         // estilos para la descripción
       }
     }
@@ -220,21 +219,24 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       gap: 30px;
 
       .card {
         //max-width: 350px;
-        background-color: hsla(248, 100%, 70%, 0.03);
+        //background-color: hsla(248, 100%, 70%, 0.03);
+        border: 2px solid rgba(198, 198, 198, 0.1);
+        background-color: rgba(245, 250, 254, 0.1);
         border-radius: 10px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 30px;
         padding: 20px;
+        width: 100%;
 
         .description {
-          text-align: justify;
+          //text-align: justify;
         }
         .content {
           display: flex;
@@ -284,12 +286,6 @@
       .title {
         // estilos para el título
       }
-
-      .paragraph {
-        margin-top: 20px;
-        text-align: justify;
-        // estilos para el párrafo
-      }
     }
     .cards-container {
       display: flex;
@@ -309,7 +305,9 @@
         overflow: hidden;
         width: 100%;
         max-width: 400px;
-        background-color: hwb(230 0% 0% / 0.01);
+
+        border: 2px solid rgba(198, 198, 198, 0.1);
+        background-color: rgba(245, 250, 254, 0.1);
 
         .top-side {
           display: flex;
@@ -526,12 +524,13 @@
   .main-about {
     // LAND SECTION
     .land-section {
-      //padding: 0 10%;
       flex-direction: row;
       height: 90vh;
+      gap: 10%;
       .info-container {
         width: 90%;
         justify-content: center;
+        gap: 30px;
         .title {
         }
         .description {
@@ -646,6 +645,7 @@
         flex-direction: row;
         .card {
           padding: 30px;
+          width: 33%;
           .description {
           }
           .content {
