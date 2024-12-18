@@ -11,7 +11,7 @@ import serviceImg4 from '@/assets/images/services/service-4.png' // Importar la 
 import serviceImg5 from '@/assets/images/services/service-5.png' // Importar la imagen directamente
 import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la imagen directamente+
 
-//import okicon from '@/assets/images/items/okicon.vue'
+//import okicon from '@/assets/images/items/okicon.vue
 </script>
 
 <template>
@@ -57,6 +57,7 @@ import serviceImg6 from '@/assets/images/services/service-6.png' // Importar la 
         primaryColor="#2F80ED"
         secondaryColor="#F0F8FF"
         orientation="row-reverse"
+        id="service-1"
       >
         <h2 class="title">DESARROLLO WEB</h2>
         <p class="description">

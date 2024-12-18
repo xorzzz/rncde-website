@@ -54,13 +54,13 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
         </div>
 
         <div>
-          <p>
+          <p class="rc-text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro maiores numquam quae
             odit dolorum sit quaerat laboriosam sunt esse accusamus aut nemo aspernatur ut rerum
             maxime deleniti, odio, fuga necessitatibus.
           </p>
 
-          <p>
+          <p class="rc-text">
             dolor sit amet consectetur adipisicing elit. Porro maiores numquam quae odit dolorum sit
             quaerat laboriosam sunt esse accusamus aut nemo aspernatur ut rerum maxime deleniti,
             odio, fuga necessitatibus.
@@ -76,7 +76,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
               </div>
               <div class="title">Orientacion al cliente</div>
             </div>
-            <div class="description">
+            <div class="rc-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto rerum nemo officiis
               aperiam quae amet itaque aut tempora illum accusantium?
             </div>
@@ -103,7 +103,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
                 <div class="feature">
                   <div class="icon">
@@ -125,7 +125,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
               </div>
               <div class="button-container">
@@ -142,7 +142,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
               </div>
               <div class="title">Proyección</div>
             </div>
-            <div class="description">
+            <div class="rc-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto rerum nemo officiis
               aperiam quae amet itaque aut tempora illum accusantium?
             </div>
@@ -169,7 +169,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
                 <div class="feature">
                   <div class="icon">
@@ -191,7 +191,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
               </div>
               <div class="button-container">
@@ -210,7 +210,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
               </div>
               <div class="title">Transparencia</div>
             </div>
-            <div class="description">
+            <div class="rc-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto rerum nemo officiis
               aperiam quae amet itaque aut tempora illum accusantium?
             </div>
@@ -237,7 +237,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
                 <div class="feature">
                   <div class="icon">
@@ -259,7 +259,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
               </div>
               <div class="button-container">
@@ -276,7 +276,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
               </div>
               <div class="title">Confianza</div>
             </div>
-            <div class="description">
+            <div class="rc-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto rerum nemo officiis
               aperiam quae amet itaque aut tempora illum accusantium?
             </div>
@@ -303,7 +303,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
                 <div class="feature">
                   <div class="icon">
@@ -325,7 +325,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                       />
                     </svg>
                   </div>
-                  <div class="text">Servicio adaptable a sus operaciones.</div>
+                  <div class="rc-text-light">Servicio adaptable a sus operaciones.</div>
                 </div>
               </div>
               <div class="button-container">
@@ -347,7 +347,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
         </div>
         <div class="content">
           <div class="title-md rc-title">GARANTÍA RUNCODE</div>
-          <div class="paragraph">
+          <div class="paragraph rc-text">
             Nuestro compromiso con cada proyecto, nos convierte en una empresa capaz de sostener la
             garantía a través del ciclo de vida de nuestros productos. Nuestro compromiso con cada
             proyecto, nos convierte en una empresa capaz de sostener la garantía a través del ciclo
@@ -360,14 +360,14 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
         <div class="card-container">
           <div class="card">
             <div class="top-section">
-              <div class="title">Soporte Garantizado</div>
+              <div class="title rc-subtitle-2">Soporte Garantizado</div>
             </div>
             <div class="content">
               <div class="img-container">
                 <img src="@/assets/images/why-runcode/pl-1.png" alt="land-services" />
               </div>
               <div class="info-container">
-                <div class="title-mb">Soporte Garantizado</div>
+                <div class="title-mb rc-subtitle-2">Soporte Garantizado</div>
                 <div class="features-container">
                   <div class="item">
                     <div class="icon">
@@ -389,7 +389,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                   <div class="item">
                     <div class="icon">
@@ -411,12 +411,12 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="paragraph">
+            <div class="paragraph rc-text">
               Transformamos sus procesos de negocio en ventajas competitivas, en alineación con la
               rentabilidad y la eficiencia de sus operaciones. Protegemos su inversión y nos
               preocupamos por los indicadores económicos de su negocio.
@@ -424,14 +424,14 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
           </div>
           <div class="card">
             <div class="top-section">
-              <div class="title">Soporte Garantizado</div>
+              <div class="title rc-subtitle-2">Soporte Garantizado</div>
             </div>
             <div class="content">
               <div class="img-container">
                 <img src="@/assets/images/why-runcode/pl-1.png" alt="land-services" />
               </div>
               <div class="info-container">
-                <div class="title-mb">Soporte Garantizado</div>
+                <div class="title-mb rc-subtitle-2">Soporte Garantizado</div>
                 <div class="features-container">
                   <div class="item">
                     <div class="icon">
@@ -453,7 +453,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                   <div class="item">
                     <div class="icon">
@@ -475,12 +475,12 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="paragraph">
+            <div class="paragraph rc-text">
               Transformamos sus procesos de negocio en ventajas competitivas, en alineación con la
               rentabilidad y la eficiencia de sus operaciones. Protegemos su inversión y nos
               preocupamos por los indicadores económicos de su negocio.
@@ -488,14 +488,14 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
           </div>
           <div class="card">
             <div class="top-section">
-              <div class="title">Soporte Garantizado</div>
+              <div class="title rc-subtitle-2">SOPORTE GARANTIZADO</div>
             </div>
             <div class="content">
               <div class="img-container">
                 <img src="@/assets/images/why-runcode/pl-1.png" alt="land-services" />
               </div>
               <div class="info-container">
-                <div class="title-mb">Soporte Garantizado</div>
+                <div class="title-mb rc-subtitle-2">Soporte Garantizad</div>
                 <div class="features-container">
                   <div class="item">
                     <div class="icon">
@@ -517,7 +517,7 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                   <div class="item">
                     <div class="icon">
@@ -539,12 +539,12 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
                         />
                       </svg>
                     </div>
-                    <div class="text">Servicio adaptable a sus operaciones.</div>
+                    <div class="text rc-text-light">Servicio adaptable a sus operaciones.</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="paragraph">
+            <div class="paragraph rc-text">
               Transformamos sus procesos de negocio en ventajas competitivas, en alineación con la
               rentabilidad y la eficiencia de sus operaciones. Protegemos su inversión y nos
               preocupamos por los indicadores económicos de su negocio.
@@ -557,8 +557,8 @@ import SectionRC from '@/components/Utils/SectionRC.vue'
     <div class="contact-section">
       <SectionRC class="content">
         <div class="info-container">
-          <div class="title">¿Empezamos?</div>
-          <div class="paragraph">
+          <div class="title rc-title">¿Empezamos?</div>
+          <div class="paragraph rc-text text-white">
             Creamos productos y servicios adaptables a sus operaciones. Centralizamos nuestros
             proyectos de desarrollo, en una idea de negocio.Sabemos que su empresa, necesita un
             tratamiento especial y personalizado

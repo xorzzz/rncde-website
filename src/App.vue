@@ -7,7 +7,7 @@ import FooterItem from './components/FooterItem.vue'
 //import ButtonNav from './components/ButtonNav.vue'
 
 const route = useRoute()
-const routesLightColor = ['/services', '/why-us', '/how-do-we-do', '/contact', '/terms']
+const routesLightColor = ['/services', '/why-us', '/how-do-we-do', '/contact', '/legal/terms']
 
 //observamos si hay algun cambio en la ruta para alertar al footer que cambie de color
 const isServicesPath = computed(() => route.path === '/why-runcode')

@@ -168,11 +168,15 @@ watch(() => props.backgroundColor, setColors, { immediate: true })
           <div class="title" :style="{ color: colors.title }">LEGAL</div>
           <div class="items-container">
             <div class="item">
-              <a href="/terms" :style="{ color: colors.text }">Términos de servicios</a>
+              <a href="/legal/terms" :style="{ color: colors.text }">Términos de servicios</a>
             </div>
             <div class="item">
-              <a href="/privacity" :style="{ color: colors.text }">Políticas de privacidad</a>
-            </div>
+              <router-link :to="{ path: '/services', hash: '#service-1' }"
+                >Ir a Servicio 1</router-link
+              >
+              <!--
+              <a href="/legal/privacity" :style="{ color: colors.text }">Políticas de privacidad</a>
+            --></div>
           </div>
         </div>
       </div>

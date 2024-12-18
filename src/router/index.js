@@ -34,15 +34,21 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue')
     },
+
     {
-      path: '/privacity',
-      name: 'privacity',
-      component: () => import('../views/PolicesView.vue')
-    },
-    {
-      path: '/terms',
-      name: 'terms',
-      component: () => import('../views/TermsView.vue')
+      path: '/legal',
+      children: [
+        {
+          path: 'terms',
+          name: 'terms',
+          component: () => import('../views/TermsView.vue')
+        },
+        {
+          path: 'privacy',
+          name: 'privacy',
+          component: () => import('../views/PolicesView.vue')
+        }
+      ]
     },
     {
       path: '/:pathMatch(.*)*',

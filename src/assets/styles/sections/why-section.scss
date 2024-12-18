@@ -182,7 +182,7 @@
     .first-section {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
 
       .title-mb {
       }
@@ -215,18 +215,17 @@
           flex-direction: column;
           border: 2px solid rgba(198, 198, 198, 0.1);
           border-radius: 10px;
-          gap: 10px;
           background-color: rgba(245, 250, 254, 0.1);
+          width: 100%;
 
           .top-section {
             display: flex;
             align-items: center;
 
             .title {
-              font-size: 20px;
-              font-weight: 700;
               text-align: center;
               color: #404040;
+              margin-bottom: 30px;
               width: 100%;
             }
             .button-container {
@@ -252,16 +251,18 @@
 
           .content {
             display: flex;
+            flex-direction: column;
             .img-container {
-              width: 36%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
               img {
-                width: 100%;
+                width: 60%;
                 height: 100%;
                 object-fit: contain;
               }
             }
             .info-container {
-              width: 64%;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -283,22 +284,12 @@
                   .icon {
                   }
                   .text {
-                    font-weight: 300;
-                    font-size: 12px;
-                    display: flex;
-                    align-items: center;
-                    text-align: justify;
                   }
                 }
               }
             }
           }
           .paragraph {
-            font-weight: 300;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            text-align: justify;
           }
         }
       }
@@ -309,13 +300,10 @@
     background-image: linear-gradient(45deg, $rc-blue-5, $rc-blue-1);
     .content {
       .info-container {
-        color: white;
         display: flex;
         flex-direction: column;
         gap: 20px;
         .title {
-          font-size: 32px;
-          font-weight: 900;
           background-image: linear-gradient(90deg, #00b5ff, #6454f0); /* Degradado */
           -webkit-background-clip: text; /* Clip del fondo al texto */
           -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el fondo */
@@ -432,7 +420,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        column-gap: 50px;
+        gap: 10%;
         padding-bottom: 10vh;
         .title-mb {
           display: none;

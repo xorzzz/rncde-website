@@ -14,7 +14,7 @@ import ButtonSolid from '@/components/Buttons/ButtonSolid.vue'
           <div class="description">A veces sucede, puedes actualizar la página.</div>
           <div>
             <RouterLink to="/" class="no-deco">
-              <ButtonSolid primaryColor="bg-blue">
+              <ButtonSolid primaryColor="blue">
                 <i class="fi fi-rr-house-chimney"></i>
 
                 Inicio
