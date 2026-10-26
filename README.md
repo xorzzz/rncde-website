@@ -4,11 +4,9 @@ Sitio web corporativo para presentar a **Runcode Ingeniería**, sus servicios de
 
 **Sitio publicado:** [www.runcode.co](https://www.runcode.co)
 
-## Vista previa
+**Maquetas previas:** [Ver diseños en Figma](https://www.figma.com/design/05aEwoLv3G2gRyxQO0nSNI/WEB-PAGES?node-id=225-255)
 
-| Escritorio | Móvil |
-| --- | --- |
-| ![Página de inicio en escritorio](Views/Home-desktop.png) | ![Página de inicio en móvil](Views/Home-Mobile.png) |
+El archivo de Figma reúne las maquetas previas de las páginas Inicio, Nosotros, Cómo lo hacemos, Por qué Runcode, Servicios y Contacto, con vistas de escritorio y móvil. Sirve como referencia para revisar la estructura visual del sitio.
 
 ## Qué incluye
 
@@ -57,7 +55,6 @@ src/
 ├── router/       # Definición de rutas
 ├── stores/       # Estado con Pinia
 └── views/        # Páginas del sitio
-Views/            # Capturas para la presentación del proyecto
 ```
 
 ## Estado del proyecto
