@@ -1,35 +1,65 @@
-# runcode
+# Runcode Ingeniería
 
-This template should help get you started developing with Vue 3 in Vite.
+Sitio web corporativo para presentar a **Runcode Ingeniería**, sus servicios de desarrollo de software y su forma de trabajo. El proyecto reúne una página de inicio, secciones informativas y una interfaz de contacto en una experiencia adaptable a distintos tamaños de pantalla.
 
-## Recommended IDE Setup
+**Sitio publicado:** [www.runcode.co](https://www.runcode.co)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Vista previa
 
-## Customize configuration
+| Escritorio | Móvil |
+| --- | --- |
+| ![Página de inicio en escritorio](Views/Home-desktop.png) | ![Página de inicio en móvil](Views/Home-Mobile.png) |
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Qué incluye
 
-## Project Setup
+- Página de inicio con presentación de la empresa, servicios y llamadas a la acción.
+- Secciones dedicadas a la empresa, los servicios, el proceso de trabajo y las razones para elegir Runcode.
+- Página de contacto con formulario visual e información de la empresa.
+- Páginas de términos, privacidad y una vista para rutas no encontradas.
+- Navegación entre páginas con transiciones, componentes reutilizables y estilos adaptables a móvil.
+- Efectos visuales con partículas mediante tsParticles.
 
-```sh
-npm install
-```
+## Tecnologías
 
-### Compile and Hot-Reload for Development
+| Herramienta | Uso en el proyecto |
+| --- | --- |
+| Vue 3 | Interfaz y componentes |
+| Vue Router 4 | Navegación entre páginas |
+| Vite 5 | Servidor de desarrollo y compilación |
+| Sass / SCSS | Estilos de secciones y componentes |
+| Pinia | Configuración de estado global |
+| tsParticles | Efectos de partículas |
 
-```sh
+## Ejecutarlo localmente
+
+Necesitas **Node.js y npm**. Desde la raíz del repositorio:
+
+```bash
+npm ci
 npm run dev
 ```
 
-### Compile and Minify for Production
+Abre en el navegador la dirección local que indique Vite. Para generar y revisar la versión de producción:
 
-```sh
+```bash
 npm run build
+npm run preview
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+El proyecto también incluye `npm run lint` y `npm run format`. Ten en cuenta que el comando de lint aplica correcciones automáticamente.
 
-```sh
-npm run lint
+## Estructura principal
+
+```text
+src/
+├── assets/       # Imágenes y estilos
+├── components/   # Navegación, botones, tarjetas y elementos reutilizables
+├── router/       # Definición de rutas
+├── stores/       # Estado con Pinia
+└── views/        # Páginas del sitio
+Views/            # Capturas para la presentación del proyecto
 ```
+
+## Estado del proyecto
+
+Esta es una implementación de la interfaz. El formulario de contacto cuenta con campos y validación HTML, pero todavía no envía mensajes a un servicio. Algunas secciones conservan texto provisional y un enlace de servicios apunta a una ruta de contacto que no está definida (`/contact-us` en lugar de `/contact`). Estos puntos quedan pendientes antes de usar el sitio como canal comercial.
